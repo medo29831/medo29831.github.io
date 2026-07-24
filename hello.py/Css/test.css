@@ -1,0 +1,328 @@
+
+button{
+    width:250px;
+    height:60px;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:10px;
+    transition:0.3s;
+}
+/* ===========================
+   General
+=========================== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#121212;
+    color:white;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00BFFF;
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+    text-align:center;
+    padding:30px;
+}
+
+.logo h1{
+    color:#00BFFF;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.logo p{
+    color:#ddd;
+    font-size:22px;
+}
+
+/* ===========================
+   Titles
+=========================== */
+
+h1{
+    text-align:center;
+    color:#00BFFF;
+}
+
+h2{
+    color:gold;
+}
+
+h3{
+    color:#00ff99;
+}
+
+/* ===========================
+   Paragraphs
+=========================== */
+
+p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* ===========================
+   Images
+=========================== */
+
+img{
+    display:block;
+    margin:20px auto;
+    max-width:100%;
+    border-radius:15px;
+}
+
+/* ===========================
+   Code Box
+=========================== */
+
+pre{
+    background:#1e1e1e;
+    color:#00ff99;
+    padding:15px;
+    border-radius:10px;
+    overflow:auto;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:20px;
+}
+
+.card{
+    background:#222;
+    width:320px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    width:200px;
+    height:55px;
+
+    margin-top:20px;
+
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+
+    border-radius:10px;
+
+    transition:all .3s ease;
+
+    cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+.btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    filter:brightness(1.1);
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+
+.btn:active{
+    transform:scale(.95);
+    filter:brightness(.9);
+}
+
+.btn:focus{
+    outline:none;
+}
+
+/* ===========================
+   Colors
+=========================== */
+
+.bl{
+    background:#3776AB;
+    color:white;
+}
+
+.or{
+    background:#E34F26;
+    color:white;
+}
+
+.pr{
+    background:#1572B6;
+    color:white;
+}
+
+.wy{
+    background:#F7DF1E;
+    color:black;
+}
+
+/* ===========================
+   Lists
+=========================== */
+
+ul,
+ol{
+    font-size:20px;
+    line-height:2;
+}
+
+/* ===========================
+   Line
+=========================== */
+
+hr{
+    border:none;
+    height:2px;
+    background:#444;
+    margin:40px 0;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    nav{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:5px;
+        font-size:18px;
+    }
+
+    .logo h1{
+        font-size:38px;
+    }
+
+    .logo p{
+        font-size:18px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .btn{
+        width:90%;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    p,
+    li{
+        font-size:18px;
+    }
+
+    pre{
+        font-size:15px;
+    }
+}
+/* إزالة تأثير الضغط على الهواتف */
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+.btn{
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+a:focus,
+button:focus,
+.btn:focus{
+    outline: none;
+}
+
+a:active,
+button:active,
+.btn:active{
+    outline: none;
+}
+a{
+    outline: none;
+}
+
+a:focus,
+a:focus-visible{
+    outline: none;
+}
+
+.btn{
+    outline: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus,
+.btn:focus-visible{
+    outline: none;
+    box-shadow: none;
+}
