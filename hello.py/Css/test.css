@@ -16,10 +16,11 @@ button{
 
 body{
     margin:0;
-    padding:0;
+    padding:0 15px;
     font-family:Arial, Helvetica, sans-serif;
     background:#121212;
     color:white;
+    box-sizing:border-box;
 }
 
 /* ===========================
@@ -325,4 +326,12 @@ a:focus-visible{
 .btn:focus-visible{
     outline: none;
     box-shadow: none;
+}
+html{
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    word-wrap: break-word;
+    overflow-x: hidden;
 }
