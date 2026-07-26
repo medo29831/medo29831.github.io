@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C++ Student Grade Calculator</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="cpp.html">C++</a>
+
+</nav>
+
+<section class="hero">
+
+<img src="images/_تنزيل.png">
+
+<h1>📚 C++ Student Grade Calculator</h1>
+
+<p>
+
+Learn how to build a student grade calculator using C++.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a program that calculates
+a student's average score and determines the final grade
+based on the average.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>C++ compiler (g++, MinGW, or Visual Studio).</li>
+
+<li>Basic knowledge of <b>cout</b> and <b>cin</b>.</li>
+
+<li>Understanding of <b>if</b>, <b>else if</b>, and <b>else</b>.</li>
+
+<li>Basic arithmetic operations.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="gradeCode">
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float math, science, english;
+    float average;
+
+    cout << "Enter Math Grade: ";
+    cin >> math;
+
+    cout << "Enter Science Grade: ";
+    cin >> science;
+
+    cout << "Enter English Grade: ";
+    cin >> english;
+
+    average = (math + science + english) / 3;
+
+    cout << "Average = " << average << endl;
+
+    if (average >= 90)
+        cout << "Grade: A";
+
+    else if (average >= 80)
+        cout << "Grade: B";
+
+    else if (average >= 70)
+        cout << "Grade: C";
+
+    else if (average >= 60)
+        cout << "Grade: D";
+
+    else
+        cout << "Grade: F";
+
+    return 0;
+}
+</code></pre>
+
+<button onclick="copyCode('gradeCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Get Student Grades</h3>
+
+<p>
+
+The program asks the user to enter three subject grades.
+
+</p>
+
+<h3>2. Calculate the Average</h3>
+
+<p>
+
+The program calculates the average of the three grades.
+
+</p>
+
+<h3>3. Check the Grade</h3>
+
+<p>
+
+The program uses <b>if</b> and <b>else if</b>
+to determine the final grade.
+
+</p>
+
+<h3>4. Display the Result</h3>
+
+<p>
+
+Finally, the program prints both the average and the student's grade.
+
+</p>
+
+<hr>
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Can you improve this Student Grade Calculator?
+
+</p>
+
+<ul>
+
+<li>Add more subjects.</li>
+
+<li>Display the highest and lowest grade.</li>
+
+<li>Allow the user to calculate grades for multiple students.</li>
+
+<li>Validate that grades are between 0 and 100.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which statement is used to check multiple grade conditions in C++?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('else if')">
+
+else if
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('for')">
+
+for
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('switch')">
+
+switch
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('while')">
+
+while
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="cpp-rps.html">
+
+<button class="project-btn">
+
+✂️ Rock Paper Scissors
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center; padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "else if"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

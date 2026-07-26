@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C# Calculator Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="csharp.html">C#</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (10).jpeg">
+
+<h1>🧮 Calculator</h1>
+
+<p>
+
+Learn how to build a simple calculator using C#.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+This project performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>.NET SDK installed.</li>
+
+<li>Visual Studio or Visual Studio Code.</li>
+
+<li>Basic knowledge of variables.</li>
+
+<li>Console input and output.</li>
+
+<li>if / else statements.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="calculatorCode">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double num1, num2;
+        char op;
+
+        Console.Write("Enter first number: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Enter operator (+ - * /): ");
+        op = Convert.ToChar(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+
+        if(op == '+')
+            Console.WriteLine("Result = " + (num1 + num2));
+
+        else if(op == '-')
+            Console.WriteLine("Result = " + (num1 - num2));
+
+        else if(op == '*')
+            Console.WriteLine("Result = " + (num1 * num2));
+
+        else if(op == '/')
+        {
+            if(num2 != 0)
+                Console.WriteLine("Result = " + (num1 / num2));
+            else
+                Console.WriteLine("Cannot divide by zero.");
+        }
+
+        else
+            Console.WriteLine("Invalid operator.");
+    }
+}
+</code></pre>
+
+<button onclick="copyCode('calculatorCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Variables</h3>
+
+<p>
+
+The program stores two numbers and one operator.
+
+</p>
+
+<h3>2. Console.ReadLine()</h3>
+
+<p>
+
+Reads the user's input.
+
+</p>
+
+<h3>3. if / else</h3>
+
+<p>
+
+Determines which arithmetic operation to perform.
+
+</p>
+
+<h3>4. Division Check</h3>
+
+<p>
+
+The program prevents division by zero.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Enter first number: 10
+
+Enter operator (+ - * /): *
+
+Enter second number: 5
+
+Result = 50
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Improve this calculator by adding:
+
+</p>
+
+<ul>
+
+<li>Percentage (%).</li>
+
+<li>Power (^).</li>
+
+<li>Square root.</li>
+
+<li>Loop to perform multiple calculations.</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which method is used to read input from the user in a C# console application?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('readline')">
+Console.ReadLine()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('writeline')">
+Console.WriteLine()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('print')">
+Print()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('scanf')">
+Scanf()
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="csharp-guess.html">
+
+<button class="project-btn">
+
+🎲 Guess the Number
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "readline"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

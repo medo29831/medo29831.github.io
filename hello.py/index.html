@@ -1,61 +1,545 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
-    <title>Programming excerpts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Excerpts</title>
     <link rel="stylesheet" href="Css/test.css">
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="python.html">Python</a>
-        <a href="html.html">HTML</a>
-        <a href="css.html">CSS</a>
-        <a href="javascript.html">JavaScript</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="python.html">Python</a>
+    <a href="cpp.html">C++</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="javascript.html">JavaScript</a>
+    <a href="java.html">Java</a>
+    <a href="csharp.html">C#</a>
+    <a href="sql.html">SQL</a>
+</nav>
+<section class="slider">
 
-    <div class="logo">
-        <h1>Programming excerpts</h1>
-        
+    <div class="slides">
+
+        <div class="slide active">
+
+            <img src="images/40867_1688892215.jpg">
+
+            <div class="caption">
+
+                <h1>Learn Python</h1>
+
+                <p>Easy and Powerful Programming Language</p>
+
+                <a href="python.html">
+                    <button class="bl">Start Learning</button>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="slide">
+
+            <img src="images/photo-1515879218367-8466d910aaa4.jpeg">
+
+            <div class="caption">
+
+                <h1>Master C++</h1>
+
+                <p>Build Games and Desktop Applications</p>
+
+                <a href="cpp.html">
+                    <button class="or">Explore C++</button>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="slide">
+
+            <img src="images/photo-1498050108023-c5249f4df085.jpeg">
+
+            <div class="caption">
+
+                <h1>Web Development</h1>
+
+                <p>HTML • CSS • JavaScript</p>
+
+                <a href="html.html">
+                    <button class="pr">Start Now</button>
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="cards">
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+
+</section>
+<hr>
+
+<h1>⭐ Popular Courses</h1>
+
+<div class="cards">
+
+    <div class="card">
+
+        <img src="images/python-logo.png"  >
+ 
+        <h2>Python</h2>
+        <p>
+            Learn Python from beginner to advanced.
+        </p>
+
+        <a href="python.html">
+            <button class="bl">Start</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <img src="images/photo-1515879218367-8466d910aaa4.jpeg" width="100%">
+
+        <h2>C++</h2>
+
+        <p>
+            Learn C++ with practical projects.
+        </p>
+
+        <a href="cpp.html">
+            <button class="or">Start</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <img src="images/photo-1498050108023-c5249f4df085.jpeg" width="100%">
+
+        <h2>Web Development</h2>
+
+        <p>
+            HTML, CSS and JavaScript.
+        </p>
+
+        <a href="html.html">
+            <button class="pr">Start</button>
+        </a>
+
+    </div>
+
+</div>
+
+
+    <div class="hero-text">
+
+        <h1>Learn Programming<br>From Scratch</h1>
+
+        <p>Start your programming journey with easy lessons,
+             practical examples, and real-world projects. If you're a beginner,
+              I recommend this language.
+
+        </p>
+
+        <a href="#languages">
+            <button class="bl">🚀 Start Learning</button>
+        </a>
+        <a href="cpp.html">
+    <button class="or">🐍 Explore Python</button>
+</a>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.avif" alt="Programming">
+
+    </div>
+
+
+
+</section>
+
+<hr>
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a language..."
+    >
+
+    <button onclick="searchLanguage()">
+        🔍 Search
+    </button>
+
+</div>
+
+<hr>
+<h1>Popular Courses</h1>
+
+<div style="text-align:center;">
+    <img src="images/أشهر-لغات-البرمجة.webp"95%">
+</div>
+
+<div class="logo">
+
+    <h1>Programming Excerpts</h1>
+
+    <p>
+        Learn Programming From Scratch
+    </p>
+
+    <a href="#languages">
+        <button class="bl">🚀 Start Learning</button>
+    </a>
+
+</div>
+
+<hr>
+
+<h1 id="languages">📚 Programming Languages</h1>
+
+<div class="cards">
+
+    <div class="card">
+
+        <h2>🐍 Python</h2>
+
+        <p>
+            Easy language for beginners.
+        </p>
+
+        <a href="python.html">
+            <button class="gr">Start Learning</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>💻 C++</h2>
+
+        <p>
+            Powerful language for games and desktop applications.
+        </p>
+
+        <a href="cpp.html">
+            <button class="bl">Start Learning</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🌐 HTML</h2>
+
+        <p>
+            Build the structure of websites.
+        </p>
+
+        <a href="html.html">
+            <button class="or">Start Learning</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🎨 CSS</h2>
+
+        <p>
+            Design beautiful and responsive websites.
+        </p>
+
+        <a href="css.html">
+            <button class="pr">Start Learning</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>⚡ JavaScript</h2>
+
+        <p>
+            Make websites interactive and dynamic.
+        </p>
+
+        <a href="javascript.html">
+            <button class="wy">Start Learning</button>
+        </a>
+        
+    
+
+    </div>
+
+    <div class="card">
+
+           <h2>☕ Java</h2>
+           <p>
+                It is used in the development of many mobile, computer, and video games.
+            </p> 
+        <a href="java.html">
+        <button class="br">Start Learning</button>
+        </a>
+    </div>
+        <div class="card">
+            <h2>#️⃣ C#</h2>
+          <p>
+            C# is a versatile programming language used to develop games, desktop applications, websites, and mobile apps. It is powerful, easy to learn, and widely used by developers around the world.
+          </p> 
+          <a href="c#.html">
+           <button class="ft">Start Learning</button> 
+          </a> 
+        </div>         
+
+        <div class="card">
+            <h2>🗄️ SQL</h2>
+            <p>
+               SQL is a language used to manage and query databases. It helps store, retrieve, update, and organize data efficiently. 
+            </p>
+            <a href="sQl.html">
+              <button class="sq">Start Learning</button>  
+                </a>
+            
+
+    </div>
+</div>
+
+
+<hr>
+
+<h1>Why Choose Programming Excerpts?</h1>
+
+<div class="cards">
+
+    <div class="card">
+
+        <h2>📘 Easy Lessons</h2>
+
+        <p>
+            Learn with simple explanations and practical examples.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>💻 Real Projects</h2>
+
+        <p>
+            Build real programming projects while learning.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🏆 Daily Challenges</h2>
+
+        <p>
+            Improve your programming skills every day.
+        </p>
+
+    </div>
+
+</div>
+
+<hr>
+
+<h1>🛣️ Learning Roadmap</h1>
+
+<ol>
+
+    <li>🌐 HTML</li>
+
+    <li>🎨 CSS</li>
+
+    <li>⚡ JavaScript</li>
+
+    <li>🐍 Python</li>
+
+    <li>💻 C++</li>
+
+    <li>☕ Java</li>
+
+    <li>#️⃣ C#</li>
+
+    <li>🗄️ SQL</li>
+
+    <!-- <li>🌿 Git & GitHub</li> -->
+
+</ol>
+<hr>
+
+<h1>🌟 Featured Course</h1>
+
+<div class="card" style="width:80%;margin:auto;">
+
+    <h2>💻 C++ Programming</h2>
+
+    <p>
+        Start learning one of the fastest and most powerful programming
+        languages in the world.
+    </p>
+
+    <a href="cpp.html">
+        <button class="bl">Start C++ Course</button>
+    </a>
+
+</div>
+
+<hr>
+
+<h1>💬 Quote of the Day</h1>
+
+<div class="card" style="width:80%;margin:auto;">
+
+    <p style="font-size:24px;color:gold;">
+        "Programming isn't about what you know,
+        it's about what you can figure out."
+    </p>
+
+    <p style="color:#ccc;">
+        — Chris Pine
+    </p>
+
+</div>
+
+<hr>
+
+<h1>📊 Website Statistics</h1>
+
+<div class="cards">
+
+    <div class="card">
+
+        <h2>8+</h2>
+
+        <p>Programming Languages</p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>100+</h2>
+
+        <p>Lessons Coming Soon</p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>∞</h2>
+
+        <p>Learning Opportunities</p>
+
+    </div>
+
+</div>
+
+<hr>
+            <h2>💡 Tip of the Day</h2>
+
+<div class="card" style="width:80%;margin:auto;">
+    <p id="dailyTip"></p>
+</div>
+
+</p>
+<hr>
+
+<h1>📰 Latest Updates</h1>
+
+<div class="cards">
+
     <div class="card">
         <h2>🐍 Python</h2>
-        <p>Learn Python from zero with simple explanations and practical examples.</p>
-        <a href="python.html">
-            <button class="bl">Read More</button>
-        </a>
+        <p>New Python course is now available.</p>
+    </div>
+
+    <div class="card">
+        <h2>💻 C++</h2>
+        <p>Now, lessons in C++, learn the C++ language</p>
     </div>
 
     <div class="card">
         <h2>🌐 HTML</h2>
-        <p>Learn HTML from zero with simple explanations and practical examples.</p>
-        <a href="html.html">
-            <button class="or">Read More</button>
-        </a>
+        <p>HTML lessons have been updated.</p>
+    </div>
+    <div class="card">
+        <h2>☕ Java</h2>
+        <p>
+            Learn the Java programming language and use it to develop many mobile games, etc.
+        </p>
+    </div>
+    <div class="card">
+        <h2>#️⃣ C#</h2>
+        <p>
+            New C# language
+        </p>
+    </div>
+    <div class="card">
+        <h2>🗄️ SQL</h2>
+    </div>
+    </div>
+    <hr>
+    <!-- <div class="card"> -->
+        <h1>We will continue, God willing, to develop and update the page so that as many people as possible can learn.</h1>
+
     </div>
 
-    <div class="card">
-        <h2>🎨 CSS</h2>
-        <p>Learn CSS from zero with simple explanations and practical examples.</p>
-        <a href="css.html">
-            <button class="pr">Read More</button>
-        </a>
-    </div>
 
-    <div class="card">
-        <h2>⚡ JavaScript</h2>
-        <p>Learn JavaScript from zero with simple explanations and practical examples.</p>
-        <a href="javascript.html">
-            <button class="wy">Read More</button>
-        </a>
-    </div>
-    </div>
+
+<footer style="text-align:center;padding:30px;">
+
+<p> 2026 Programming Excerpts</p>>
+
+
+<p>
+
+Learn • Build • Create
+
+</p>
+
+<!-- <a href="about.html">About</a> | -->
+
+<!-- <a href="contact.html">Contact</a> | -->
+
+<!-- <a href="privacy.html">Privacy Policy</a> -->
+
+<hr>
+
+<h1>🎯 Our Mission</h1>
+
+<div class="card" style="width:80%;margin:auto;">
+    <p>
+        Programming Excerpts was created to help beginners learn programming in a simple and practical way. Our goal is to make programming accessible to everyone.
+    </p>
+</div>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+    <p>© 2026 Programming Excerpts</p>
+
+    <!-- <p>Learn • Build • Create</p> -->
+
+    <!-- <a href="about.html">About</a> | -->
+    <!-- <a href="contact.html">Contact</a> | -->
+    <!-- <a href="privacy.html">Privacy Policy</a> -->
+</footer>
+<script src="script.js"></script>
 </body>
-
 </html>

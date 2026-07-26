@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SQL - Programming Excerpts</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="cpp.html">C++</a>
+<a href="java.html">Java</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="javascript.html">JavaScript</a>
+<a href="sql.html">SQL</a>
+<a href="csharp.html">C#</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (12).jpeg">
+
+<h1>🗄️ SQL Programming</h1>
+
+<p>
+
+Learn SQL, the language used to manage and query databases.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 What is SQL?</h2>
+
+<p>
+
+SQL stands for <b>Structured Query Language</b>. It is the standard language used to create, manage, and retrieve data from relational databases such as MySQL, SQL Server, PostgreSQL, and SQLite.
+
+</p>
+
+<img src="images/images (12).jpeg">
+<p>
+    SQL was created by Donald D. Chamberlin and Raymond F. Boyce at IBM in the early 1970s. It became the standard language for managing relational databases.
+</p>
+
+<hr>
+
+<h2>⭐ Features of SQL</h2>
+
+<ul>
+
+<li>Easy to Learn</li>
+
+<li>Simple Syntax</li>
+
+<li>Works with Databases</li>
+
+<li>Fast Data Retrieval</li>
+
+<li>Supports Large Databases</li>
+
+<li>Cross Platform</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 First SQL Program</h2>
+
+<div class="code-box">
+
+<pre><code id="sqlCode">
+SELECT * FROM Students;
+</code></pre>
+
+<button onclick="copyCode('sqlCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<p><b>SELECT</b> retrieves data from a table.</p>
+
+<p><b>*</b> means all columns.</p>
+
+<p><b>FROM Students</b> specifies the table name.</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+ID | Name | Age
+
+1 | Ali | 18
+
+2 | Sara | 20
+
+3 | Omar | 19
+
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Write an SQL query to display all records from the Employees table.
+
+</p>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which SQL command is used to retrieve data?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('select')">
+
+SELECT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('insert')">
+
+INSERT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('update')">
+
+UPDATE
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('delete')">
+
+DELETE
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>💻 Install SQL</h2>
+
+<h3>Popular Database Systems</h3>
+
+<ul>
+
+<li>MySQL</li>
+
+<li>Microsoft SQL Server</li>
+
+<li>PostgreSQL</li>
+
+<li>SQLite</li>
+
+</ul>
+
+<hr>
+<h2>🪟 Install SQL on Windows</h2>
+
+<p>Follow these steps to start using SQL:</p>
+
+<ol>
+<li>Download MySQL Community Server.</li>
+<li>Install MySQL Workbench.</li>
+<li>Complete the installation wizard.</li>
+<li>Open MySQL Workbench.</li>
+<li>Create a new database.</li>
+</ol>
+
+<hr>
+
+<h2>🍎 Install SQL on macOS</h2>
+
+<ol>
+<li>Download MySQL for macOS.</li>
+<li>Install MySQL Server.</li>
+<li>Install MySQL Workbench.</li>
+<li>Connect to your database.</li>
+</ol>
+
+<hr>
+
+<h2>🐧 Install SQL on Linux</h2>
+
+<p>Update your packages:</p>
+
+<div class="code-box">
+<pre><code id="linuxSql1">
+sudo apt update
+</code></pre>
+
+<button onclick="copyCode('linuxSql1')">
+📋 Copy Code
+</button>
+</div>
+
+<p>Install MySQL Server:</p>
+
+<div class="code-box">
+<pre><code id="linuxSql2">
+sudo apt install mysql-server
+</code></pre>
+
+<button onclick="copyCode('linuxSql2')">
+📋 Copy Code
+</button>
+</div>
+
+<p>Check the installed version:</p>
+
+<div class="code-box">
+<pre><code id="linuxSql3">
+mysql --version
+</code></pre>
+
+<button onclick="copyCode('linuxSql3')">
+📋 Copy Code
+</button>
+</div>
+
+<hr>
+
+<h2>💻 Install SQL on ChromeOS</h2>
+
+<ol>
+<li>Enable Linux Development Environment.</li>
+<li>Open Terminal.</li>
+<li>Install MySQL.</li>
+<li>Verify the installation.</li>
+</ol>
+
+<div class="code-box">
+<pre><code id="chromeSql">
+mysql --version
+</code></pre>
+
+<button onclick="copyCode('chromeSql')">
+📋 Copy Code
+</button>
+</div>
+
+<hr>
+
+<h2>🚀 SQL Projects for Beginners</h2>
+
+<div class="project-card">
+<h3>📚 Student Database</h3>
+
+<p>Create a table to store student information.</p>
+
+<a href="sql-student.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+
+</div>
+
+<div class="project-card">
+<h3>👨 Employee Database</h3>
+
+<p>Manage employee records using SQL.</p>
+
+<a href="sql-employee.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+
+</div>
+
+<div class="project-card">
+<h3>🛒 Online Store Database</h3>
+
+<p>Create tables for products and customers.</p>
+
+<a href="sql-store.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+
+</div>
+
+<div class="project-card">
+<h3>🏦 Bank Database</h3>
+
+<p>Store customer and account information.</p>
+
+<a href="sql-bank.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+
+</div>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code=document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer==="select"){
+
+document.getElementById("result").innerHTML="✅ Correct!";
+
+document.getElementById("result").style.color="lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="❌ Wrong Answer!";
+
+document.getElementById("result").style.color="red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

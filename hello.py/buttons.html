@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Colorful Buttons Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="css.html">CSS</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (1).png">
+
+<h1>🎨 Colorful Buttons</h1>
+
+<p>
+
+Learn how to create beautiful buttons using CSS.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will learn how to style buttons using CSS.
+You will change colors, borders, rounded corners, hover effects,
+and transitions.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of CSS.</li>
+
+<li>Understanding of colors.</li>
+
+<li>Understanding of hover effects.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="buttonCode">
+&lt;button class="btn"&gt;
+Click Me
+&lt;/button&gt;
+</code></pre>
+
+<button onclick="copyCode('buttonCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<div class="code-box">
+
+<pre><code id="cssButtonCode">
+.btn{
+background:#2196F3;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:10px;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1565C0;
+transform:scale(1.05);
+}
+</code></pre>
+
+<button onclick="copyCode('cssButtonCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Background Color</h3>
+
+<p>
+
+The <b>background</b> property changes the button color.
+
+</p>
+
+<h3>2. Text Color</h3>
+
+<p>
+
+The <b>color</b> property changes the text color.
+
+</p>
+
+<h3>3. Rounded Corners</h3>
+
+<p>
+
+The <b>border-radius</b> property creates rounded corners.
+
+</p>
+
+<h3>4. Hover Effect</h3>
+
+<p>
+
+The <b>:hover</b> selector changes the button style when the mouse moves over it.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+<button class="project-btn">
+
+Click Me
+
+</button>
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create three buttons with different colors.
+Add a hover effect that changes the color and slightly enlarges the button.
+
+</p>
+
+<ul>
+
+<li>Create a blue button.</li>
+
+<li>Create a green button.</li>
+
+<li>Create a red button.</li>
+
+<li>Add rounded corners.</li>
+
+<li>Add a hover animation.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which CSS selector is used to change the button style when the mouse is over it?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('hover')">
+
+:hover
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('active')">
+
+:active
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('focus')">
+
+:focus
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('visited')">
+
+:visited
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="card.html">
+
+<button class="project-btn">
+
+📦 Styled Card
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code=document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer==="hover"){
+
+document.getElementById("result").innerHTML="✅ Correct!";
+
+document.getElementById("result").style.color="lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="❌ Wrong Answer!";
+
+document.getElementById("result").style.color="red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

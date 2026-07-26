@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Restaurant Menu Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="html.html">HTML</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (4).jpeg">
+
+<h1>🍽️ HTML Restaurant Menu</h1>
+
+<p>
+
+Learn how to create a simple restaurant menu using HTML.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will create a restaurant menu webpage.
+The page will display different food categories,
+menu items, and their prices in a clean and organized layout.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Understanding of headings and paragraphs.</li>
+
+<li>Knowledge of lists.</li>
+
+<li>Basic knowledge of tables.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="menuCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Restaurant Menu&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;My Restaurant&lt;/h1&gt;
+
+&lt;h2&gt;🍕 Pizza&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Margherita - $8&lt;/li&gt;
+    &lt;li&gt;Pepperoni - $10&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;🍔 Burgers&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Classic Burger - $7&lt;/li&gt;
+    &lt;li&gt;Cheese Burger - $9&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;🥤 Drinks&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Cola - $2&lt;/li&gt;
+    &lt;li&gt;Orange Juice - $3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<button onclick="copyCode('menuCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Restaurant Name</h3>
+
+<p>
+
+Use the <b>&lt;h1&gt;</b> tag to display the restaurant name.
+
+</p>
+
+<h3>2. Food Categories</h3>
+
+<p>
+
+Use the <b>&lt;h2&gt;</b> tag for each menu category.
+
+</p>
+
+<h3>3. Menu Items</h3>
+
+<p>
+
+Use the <b>&lt;ul&gt;</b> and <b>&lt;li&gt;</b> tags to list food items.
+
+</p>
+
+<h3>4. Prices</h3>
+
+<p>
+
+Write the price beside each item.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+🍽️ My Restaurant
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own restaurant menu that includes:
+
+</p>
+
+<ul>
+
+<li>The restaurant name.</li>
+
+<li>At least three food categories.</li>
+
+<li>At least two items in each category.</li>
+
+<li>The price of each item.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which HTML tag is commonly used to create an unordered list?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('ul')">
+&lt;ul&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('table')">
+&lt;table&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('p')">
+&lt;p&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('img')">
+&lt;img&gt;
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="gallery.html">
+
+<button class="project-btn">
+
+🖼️ Image Gallery
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "ul"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

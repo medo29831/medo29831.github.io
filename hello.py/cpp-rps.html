@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C++ Rock Paper Scissors Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="cpp.html">C++</a>
+
+</nav>
+
+<section class="hero">
+
+<img src="images/_تنزيل.png">
+
+<h1>✂️ C++ Rock Paper Scissors Project</h1>
+
+<p>
+
+Learn how to build the classic Rock Paper Scissors game using C++.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build the classic Rock Paper Scissors game.
+The player chooses Rock, Paper, or Scissors, while the computer makes
+a random choice. The program then determines the winner.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>C++ compiler (g++, MinGW, or Visual Studio).</li>
+
+<li>Basic knowledge of <b>cout</b> and <b>cin</b>.</li>
+
+<li>Understanding of <b>if</b>, <b>else if</b>, and <b>else</b>.</li>
+
+<li>Basic knowledge of random numbers using <b>rand()</b>.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="rpsCode">
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+
+    int player, computer;
+
+    cout << "1 = Rock" << endl;
+    cout << "2 = Paper" << endl;
+    cout << "3 = Scissors" << endl;
+
+    cout << "Choose: ";
+    cin >> player;
+
+    computer = rand() % 3 + 1;
+
+    if(player == computer)
+    {
+        cout << "It's a Draw!";
+    }
+    else if(
+        (player == 1 && computer == 3) ||
+        (player == 2 && computer == 1) ||
+        (player == 3 && computer == 2)
+    )
+    {
+        cout << "You Win!";
+    }
+    else
+    {
+        cout << "Computer Wins!";
+    }
+
+    return 0;
+}
+</code></pre>
+
+<button onclick="copyCode('rpsCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Include Libraries</h3>
+
+<p>
+
+The program includes <b>cstdlib</b> and <b>ctime</b>
+to generate random choices for the computer.
+
+</p>
+
+<h3>2. Get Player Choice</h3>
+
+<p>
+
+The player selects Rock, Paper, or Scissors using <b>cin</b>.
+
+</p>
+
+<h3>3. Generate Computer Choice</h3>
+
+<p>
+
+The computer randomly chooses a number from 1 to 3.
+
+</p>
+
+<h3>4. Compare Choices</h3>
+
+<p>
+
+The program compares the player's choice with the computer's choice
+using <b>if</b> and <b>else if</b> statements.
+
+</p>
+
+<h3>5. Display the Winner</h3>
+
+<p>
+
+Finally, the program displays whether the player wins,
+the computer wins, or the game ends in a draw.
+
+</p>
+
+<hr>
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Can you improve this Rock Paper Scissors game?
+
+</p>
+
+<ul>
+
+<li>Allow the player to play multiple rounds.</li>
+
+<li>Keep track of the player's and computer's scores.</li>
+
+<li>Add input validation for invalid choices.</li>
+
+<li>Display the computer's choice as text instead of a number.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which C++ function is commonly used to generate random numbers?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('rand')">
+
+rand()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('cout')">
+
+cout
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('cin')">
+
+cin
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('main')">
+
+main()
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="cpp.html">
+
+<button class="project-btn">
+
+💻 Back to C++ Projects
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center; padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "rand"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

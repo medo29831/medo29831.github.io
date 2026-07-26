@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Styled Card Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="css.html">CSS</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (1).png">
+
+<h1>📦 Styled Card</h1>
+
+<p>
+
+Learn how to create a modern card using CSS.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a stylish card that contains an image,
+a title, a description, and a button.
+You will also learn how to add shadows, rounded corners, spacing,
+and hover effects.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of CSS.</li>
+
+<li>Understanding of colors and spacing.</li>
+
+<li>Basic knowledge of hover effects.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="cardHtmlCode">
+&lt;div class="card"&gt;
+
+    &lt;img src="images/profile.jpg" alt="Profile"&gt;
+
+    &lt;h2&gt;John Doe&lt;/h2&gt;
+
+    &lt;p&gt;
+    Front-End Developer
+    &lt;/p&gt;
+
+    &lt;button&gt;
+    View Profile
+    &lt;/button&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<button onclick="copyCode('cardHtmlCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<div class="code-box">
+
+<pre><code id="cardCssCode">
+.card{
+
+background:#222;
+
+width:300px;
+
+padding:20px;
+
+margin:auto;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:0 0 15px rgba(0,0,0,.4);
+
+transition:.3s;
+
+}
+
+.card img{
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+}
+
+.card button{
+
+background:#2196F3;
+
+color:white;
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 20px #00BFFF;
+
+}
+</code></pre>
+
+<button onclick="copyCode('cardCssCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Card Container</h3>
+
+<p>
+
+The <b>.card</b> class creates the main card with padding,
+rounded corners, and a shadow.
+
+</p>
+
+<h3>2. Profile Image</h3>
+
+<p>
+
+The image is displayed as a circle using
+<b>border-radius: 50%</b>.
+
+</p>
+
+<h3>3. Button</h3>
+
+<p>
+
+The button is styled with a background color,
+rounded corners, and a pointer cursor.
+
+</p>
+
+<h3>4. Hover Effect</h3>
+
+<p>
+
+The card moves slightly upward and its shadow becomes brighter
+when the mouse is placed over it.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+<div class="card">
+
+<img src="images/profile.jpg" alt="Profile">
+
+<h2>John Doe</h2>
+
+<p>Front-End Developer</p>
+
+<button class="project-btn">
+
+View Profile
+
+</button>
+
+</div>
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own profile card that includes:
+
+</p>
+
+<ul>
+
+<li>A profile image.</li>
+
+<li>Your name.</li>
+
+<li>A short description.</li>
+
+<li>A button.</li>
+
+<li>Add a hover effect to the card.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which CSS property is used to create rounded corners?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('border-radius')">
+
+border-radius
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('padding')">
+
+padding
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('margin')">
+
+margin
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('display')">
+
+display
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="navbar.html">
+
+<button class="project-btn">
+
+🌐 Responsive Navigation Bar
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "border-radius"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

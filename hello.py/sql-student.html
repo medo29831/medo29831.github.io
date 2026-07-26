@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SQL Student Database</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="sql.html">SQL</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (12).jpeg">
+
+<h1>📚 Student Database</h1>
+
+<p>
+
+Learn how to create and manage a student database using SQL.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+This project creates a database table for students and stores information such as ID, name, age, and grade.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>MySQL or SQLite installed.</li>
+
+<li>Basic SQL knowledge.</li>
+
+<li>Understanding of CREATE TABLE.</li>
+
+<li>Understanding of INSERT statements.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="studentCode">
+CREATE TABLE Students (
+
+    ID INT PRIMARY KEY,
+
+    Name VARCHAR(50),
+
+    Age INT,
+
+    Grade VARCHAR(5)
+
+);
+
+INSERT INTO Students
+VALUES
+
+(1,'Ali',18,'A'),
+
+(2,'Sara',19,'B'),
+
+(3,'Omar',18,'A');
+
+SELECT * FROM Students;
+</code></pre>
+
+<button onclick="copyCode('studentCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<p><b>CREATE TABLE</b> creates a new table.</p>
+
+<p><b>INSERT INTO</b> adds new records.</p>
+
+<p><b>SELECT *</b> displays all records.</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+ID | Name | Age | Grade
+
+1 | Ali | 18 | A
+
+2 | Sara | 19 | B
+
+3 | Omar | 18 | A
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Try adding another student and display only students with Grade = 'A'.
+
+</p>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which SQL command is used to add new records to a table?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('insert')">
+
+INSERT INTO
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('select')">
+
+SELECT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('delete')">
+
+DELETE
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('update')">
+
+UPDATE
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="sql-employee.html">
+
+<button class="project-btn">
+
+👨 Employee Database
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "insert"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

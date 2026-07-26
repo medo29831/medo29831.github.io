@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C# ATM System Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="csharp.html">C#</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (10).jpeg">
+
+<h1>🏧 ATM System</h1>
+
+<p>
+
+Learn how to build a simple ATM system using C#.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a simple ATM system that allows users to check their balance, deposit money, withdraw money, and exit the program.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>.NET SDK installed.</li>
+
+<li>Visual Studio or Visual Studio Code.</li>
+
+<li>Basic knowledge of variables.</li>
+
+<li>while loop.</li>
+
+<li>switch statement.</li>
+
+<li>Console input/output.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="atmCode">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double balance = 1000;
+        int choice;
+
+        while(true)
+        {
+            Console.WriteLine("\n===== ATM MENU =====");
+            Console.WriteLine("1. Check Balance");
+            Console.WriteLine("2. Deposit");
+            Console.WriteLine("3. Withdraw");
+            Console.WriteLine("4. Exit");
+
+            Console.Write("Choose: ");
+            choice = Convert.ToInt32(Console.ReadLine());
+
+            switch(choice)
+            {
+                case 1:
+                    Console.WriteLine("Balance: $" + balance);
+                    break;
+
+                case 2:
+                    Console.Write("Deposit amount: ");
+                    balance += Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Deposit successful.");
+                    break;
+
+                case 3:
+                    Console.Write("Withdraw amount: ");
+                    double amount = Convert.ToDouble(Console.ReadLine());
+
+                    if(amount <= balance)
+                    {
+                        balance -= amount;
+                        Console.WriteLine("Withdrawal successful.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Insufficient balance.");
+                    }
+
+                    break;
+
+                case 4:
+                    Console.WriteLine("Thank you for using the ATM.");
+                    return;
+
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
+            }
+        }
+    }
+}
+</code></pre>
+
+<button onclick="copyCode('atmCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Balance</h3>
+
+<p>
+
+A variable stores the current account balance.
+
+</p>
+
+<h3>2. while(true)</h3>
+
+<p>
+
+The menu keeps running until the user chooses Exit.
+
+</p>
+
+<h3>3. switch</h3>
+
+<p>
+
+Each menu option performs a different ATM operation.
+
+</p>
+
+<h3>4. if Statement</h3>
+
+<p>
+
+The program checks if there is enough balance before withdrawing money.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+===== ATM MENU =====
+
+1. Check Balance
+
+2. Deposit
+
+3. Withdraw
+
+4. Exit
+
+Choose: 1
+
+Balance: $1000
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Improve this ATM system by adding:
+
+</p>
+
+<ul>
+
+<li>A PIN code before entering the menu.</li>
+
+<li>Transaction history.</li>
+
+<li>Money transfer between accounts.</li>
+
+<li>Multiple user accounts.</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which C# statement is used to handle multiple menu options?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('switch')">
+
+switch
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('if')">
+
+if
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('for')">
+
+for
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('while')">
+
+while
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="csharp-grade.html">
+
+<button class="project-btn">
+
+📚 Student Grade Calculator
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "switch"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

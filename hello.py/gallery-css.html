@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Image Gallery Layout</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="css.html">CSS</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (1).png">
+
+<h1>🖼️ Image Gallery Layout</h1>
+
+<p>
+
+Learn how to build a beautiful and responsive image gallery using CSS Grid.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will create a responsive image gallery.
+You will learn how to organize images using CSS Grid,
+add spacing, rounded corners, shadows, and hover effects.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of CSS.</li>
+
+<li>Understanding of CSS Grid.</li>
+
+<li>Basic knowledge of hover effects.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="galleryHtml">
+&lt;div class="gallery"&gt;
+
+    &lt;img src="images/photo1.jpg" alt="Photo 1"&gt;
+
+    &lt;img src="images/photo2.jpg" alt="Photo 2"&gt;
+
+    &lt;img src="images/photo3.jpg" alt="Photo 3"&gt;
+
+    &lt;img src="images/photo4.jpg" alt="Photo 4"&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<button onclick="copyCode('galleryHtml')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<div class="code-box">
+
+<pre><code id="galleryCss">
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+padding:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:15px;
+
+box-shadow:0 0 12px rgba(0,0,0,.4);
+
+transition:.3s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px #00BFFF;
+
+}
+</code></pre>
+
+<button onclick="copyCode('galleryCss')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. CSS Grid</h3>
+
+<p>
+
+The <b>display: grid</b> property creates a responsive image layout.
+
+</p>
+
+<h3>2. Grid Columns</h3>
+
+<p>
+
+The <b>grid-template-columns</b> property automatically adjusts the number of columns based on the screen size.
+
+</p>
+
+<h3>3. Gap</h3>
+
+<p>
+
+The <b>gap</b> property adds space between images.
+
+</p>
+
+<h3>4. Hover Effect</h3>
+
+<p>
+
+The images become larger and display a blue shadow when the mouse moves over them.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+<div class="gallery">
+
+<img src="images/photo1.jpg" width="150">
+
+<img src="images/photo2.jpg" width="150">
+
+<img src="images/photo3.jpg" width="150">
+
+<img src="images/photo4.jpg" width="150">
+
+</div>
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own responsive image gallery that includes:
+
+</p>
+
+<ul>
+
+<li>At least four images.</li>
+
+<li>Rounded corners for every image.</li>
+
+<li>A shadow around each image.</li>
+
+<li>A hover effect that enlarges the image.</li>
+
+<li>A responsive layout using CSS Grid.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which CSS property is used to create a Grid layout?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('grid')">
+
+display: grid
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('flex')">
+
+display: flex
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('block')">
+
+display: block
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('inline')">
+
+display: inline
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Back to CSS Projects</h2>
+
+<a href="css.html">
+
+<button class="project-btn">
+
+🎨 CSS Projects
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "grid"){
+
+        document.getElementById("result").innerHTML = "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML = "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

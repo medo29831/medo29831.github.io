@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Image Gallery Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="html.html">HTML</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (4).jpeg">
+
+<h1>🖼️ HTML Image Gallery</h1>
+
+<p>
+
+Learn how to create a simple image gallery using HTML.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build an image gallery webpage.
+The page will display multiple images with captions in a clean
+and organized layout.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Understanding of images.</li>
+
+<li>Knowledge of headings and paragraphs.</li>
+
+<li>Basic knowledge of folders and file paths.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="galleryCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;Image Gallery&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;My Image Gallery&lt;/h1&gt;
+
+&lt;img src="images/photo1.jpg" alt="Photo 1" width="250"&gt;
+
+&lt;p&gt;Beautiful Nature&lt;/p&gt;
+
+&lt;img src="images/photo2.jpg" alt="Photo 2" width="250"&gt;
+
+&lt;p&gt;Mountain View&lt;/p&gt;
+
+&lt;img src="images/photo3.jpg" alt="Photo 3" width="250"&gt;
+
+&lt;p&gt;Sunset&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<button onclick="copyCode('galleryCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Create the Page Title</h3>
+
+<p>
+
+Use the <b>&lt;title&gt;</b> tag to name your webpage.
+
+</p>
+
+<h3>2. Add a Heading</h3>
+
+<p>
+
+Use the <b>&lt;h1&gt;</b> tag to display the gallery title.
+
+</p>
+
+<h3>3. Display Images</h3>
+
+<p>
+
+Use the <b>&lt;img&gt;</b> tag to add images to the page.
+
+</p>
+
+<h3>4. Add Captions</h3>
+
+<p>
+
+Use the <b>&lt;p&gt;</b> tag to describe each image.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+🖼️ My Image Gallery
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own image gallery that includes:
+
+</p>
+
+<ul>
+
+<li>At least three images.</li>
+
+<li>A caption below each image.</li>
+
+<li>A main title for the gallery.</li>
+
+<li>Organize the images in a clean layout.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which HTML tag is used to display an image?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('img')">
+&lt;img&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('a')">
+&lt;a&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('div')">
+&lt;div&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('p')">
+&lt;p&gt;
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Back to HTML Projects</h2>
+
+<a href="html.html">
+
+<button class="project-btn">
+
+🌐 HTML Projects
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "img"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

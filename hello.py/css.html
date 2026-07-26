@@ -1,160 +1,307 @@
 <!DOCTYPE html>
-<html>
-<head >
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
-    <title>Learn CSS</title>
-    <link rel="stylesheet" href="Css/test.css">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS - Programming Excerpts</title>
+<link rel="stylesheet" href="Css/test.css">
 </head>
 
 <body>
 
-<h1>CSS snippets</h1>
-
 <nav>
-    <a href="index.html">Home</a>
-    <a href="python.html">Python</a>
-    <a href="html.html">HTML</a>
-    <a href="css.html">CSS</a>
-    <a href="javascript.html">JavaScript</a>
+<a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="cpp.html">C++</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="javascript.html">JavaScript</a>
+<a href="sQl.html">SQL</a>
+<a href="c#.html">C#</a>
+<a href="java.html">Java</a>
 </nav>
 
+<section class="hero">
+
+<img src="images/images (1).png">
+
+<h1>🎨 CSS Programming</h1>
+
 <p>
-CSS (Cascading Style Sheets) is the language used to style HTML pages.
-It controls colors, fonts, spacing, layouts, animations, and the overall appearance of a website.
+
+Learn how to style beautiful websites using CSS.
+CSS controls colors, layouts, fonts, animations, and much more.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 What is CSS?</h2>
+
+<p>
+
+CSS stands for <b>Cascading Style Sheets</b>.
+It is used to style HTML pages by changing colors, fonts,
+spacing, layouts, animations, and responsive designs.
+
+</p>
+
+<img src="images/images (7).jpeg">
+<p>
+    CSS was first introduced in 1994 by Norwegian engineer Håkon Wyom Lie, who was then working at CERN with Berners-Lee. Two years later, the World Wide Web Consortium (W3C) adopted the first standardized CSS specification, called CSS1.
+
 </p>
 
 <hr>
 
-<h2>🎨 What is CSS?</h2>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="180">
-
-<p>
-CSS is used to make websites beautiful and attractive. Without CSS, web pages would look plain with only text and simple elements.
-</p>
-
-<h3>Example</h3>
-
-<pre>
-h1{
-    color: blue;
-}
-
-p{
-    font-size:20px;
-}
-</pre>
-
-<hr>
-
-<h2>⭐ Why is CSS Important?</h2>
-
-<p>
-CSS separates the design from the content, making websites easier to build, maintain, and customize.
-</p>
+<h2>⭐ Features of CSS</h2>
 
 <ul>
-    <li>Adds colors.</li>
-    <li>Changes fonts.</li>
-    <li>Creates layouts.</li>
-    <li>Makes websites responsive.</li>
+
+<li>Easy to Learn</li>
+
+<li>Makes Websites Beautiful</li>
+
+<li>Responsive Design</li>
+
+<li>Animations & Effects</li>
+
+<li>Works with HTML</li>
+
+<li>Supported by All Browsers</li>
+
 </ul>
 
-<h3>Example</h3>
+<hr>
 
-<pre>
+<h2>💻 First CSS Program</h2>
+
+<div class="code-box">
+
+<pre><code id="cssCode">
 body{
-    background:#121212;
-    color:white;
+    background: black;
+    color: white;
 }
-</pre>
+
+h1{
+    color: deepskyblue;
+}
+</code></pre>
+
+<button onclick="copyCode('cssCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
 
 <hr>
 
-<h2>🎯 Why Should Beginners Learn CSS?</h2>
+<h2>📖 Code Explanation</h2>
 
 <p>
-After learning HTML, CSS is the next step. It allows you to transform simple web pages into modern and professional websites.
+
+<b>background</b> changes the page background color.
+
 </p>
 
-<ol>
-    <li>Easy to learn.</li>
-    <li>Works with HTML.</li>
-    <li>Creates beautiful designs.</li>
-    <li>Responsive for all devices.</li>
-    <li>Essential for web development.</li>
-</ol>
+<p>
+
+<b>color</b> changes the text color.
+
+</p>
+
+<p>
+
+<b>body</b> styles the whole webpage.
+
+</p>
+
+<p>
+
+<b>h1</b> styles the main heading.
+
+</p>
 
 <hr>
 
-<h2>💻 What Can You Do with CSS?</h2>
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Blue Heading on Black Background
+
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create a CSS file that changes:
+
+</p>
 
 <ul>
-    <li>Change colors.</li>
-    <li>Create animations.</li>
-    <li>Design buttons.</li>
-    <li>Build responsive layouts.</li>
-    <li>Add shadows and borders.</li>
-    <li>Create modern user interfaces.</li>
+
+<li>The page background color.</li>
+
+<li>The heading color.</li>
+
+<li>The paragraph font size.</li>
+
 </ul>
 
 <hr>
 
-<h2>📄 Basic CSS Syntax</h2>
+<h2>❓ Quiz</h2>
 
 <p>
-Every CSS rule consists of a selector and a declaration block.
+
+Which CSS property changes the text color?
+
 </p>
 
-<pre>
-selector{
+<button class="quiz-btn" onclick="checkAnswer('color')">
+color
+</button>
 
-    property: value;
+<button class="quiz-btn" onclick="checkAnswer('font')">
+font
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('size')">
+size
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('margin')">
+margin
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>🚀 CSS Projects for Beginners</h2>
+
+<div class="project-card">
+
+<h3>🎨 Colorful Buttons</h3>
+
+<p>Create beautiful buttons using CSS.</p>
+
+<a href="buttons.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>📦 Styled Card</h3>
+
+<p>Create a modern card layout.</p>
+
+<a href="card.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>🌐 Responsive Navigation Bar</h3>
+
+<p>Create a responsive navigation menu.</p>
+
+<a href="navbar.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>🖼️ Image Gallery Layout</h3>
+
+<p>Create a responsive image gallery.</p>
+
+<a href="gallery-css.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code=document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
 
 }
-</pre>
 
-<hr>
+function checkAnswer(answer){
 
-<h2>📌 Common CSS Properties</h2>
+if(answer==="color"){
 
-<ul>
-    <li>color → Text Color</li>
-    <li>background-color → Background Color</li>
-    <li>font-size → Font Size</li>
-    <li>width → Element Width</li>
-    <li>height → Element Height</li>
-    <li>margin → Outside Space</li>
-    <li>padding → Inside Space</li>
-    <li>border → Border</li>
-    <li>display → Display Type</li>
-    <li>position → Element Position</li>
-</ul>
+document.getElementById("result").innerHTML="✅ Correct!";
 
-<hr>
+document.getElementById("result").style.color="lime";
 
-<h2>🖌 Example: Styling a Button</h2>
+}else{
 
-<pre>
-button{
+document.getElementById("result").innerHTML="❌ Wrong Answer!";
 
-    background:#1572B6;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:8px;
+document.getElementById("result").style.color="red";
 
 }
-</pre>
 
-<hr>
+}
 
-<h2>🏁 Conclusion</h2>
-
-<p>
-CSS is an essential technology for web development. It works together with HTML to create beautiful, responsive, and professional websites. Once you master CSS, you will be able to design modern web pages that look great on all devices.
-</p>
+</script>
 
 </body>
 </html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Calculator Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="java.html">Java</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (8).jpeg">
+
+<h1>☕ Java Calculator Project</h1>
+
+<p>
+
+Learn how to build a simple calculator using Java.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Java JDK installed.</li>
+
+<li>Basic knowledge of variables.</li>
+
+<li>Scanner class.</li>
+
+<li>if / else statements.</li>
+
+<li>Arithmetic operators (+, -, *, /).</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="javaCalc">
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Choose (+, -, *, /): ");
+        char op = input.next().charAt(0);
+
+        System.out.print("First number: ");
+        double num1 = input.nextDouble();
+
+        System.out.print("Second number: ");
+        double num2 = input.nextDouble();
+
+        if(op == '+'){
+            System.out.println(num1 + num2);
+        }
+        else if(op == '-'){
+            System.out.println(num1 - num2);
+        }
+        else if(op == '*'){
+            System.out.println(num1 * num2);
+        }
+        else if(op == '/'){
+            if(num2 != 0){
+                System.out.println(num1 / num2);
+            }else{
+                System.out.println("Cannot divide by zero");
+            }
+        }
+        else{
+            System.out.println("Invalid operator");
+        }
+
+        input.close();
+
+    }
+
+}
+</code></pre>
+
+<button onclick="copyCode('javaCalc')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Scanner</h3>
+
+<p>
+
+The Scanner class is used to read input from the user.
+
+</p>
+
+<h3>2. Variables</h3>
+
+<p>
+
+The program stores the operator and two numbers entered by the user.
+
+</p>
+
+<h3>3. if / else</h3>
+
+<p>
+
+The program checks which arithmetic operation should be performed.
+
+</p>
+
+<h3>4. Division by Zero</h3>
+
+<p>
+
+Before division, the program checks if the second number is zero.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Choose (+, -, *, /): +
+
+First number: 10
+
+Second number: 5
+
+15.0
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Can you improve this calculator?
+
+</p>
+
+<ul>
+
+<li>Add the modulus operator (%).</li>
+
+<li>Add the exponent operation.</li>
+
+<li>Allow multiple calculations.</li>
+
+<li>Handle invalid input.</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which Java class is used to get input from the user?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('scanner')">
+
+Scanner
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('system')">
+
+System
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('string')">
+
+String
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('math')">
+
+Math
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="java-guess.html">
+
+<button class="project-btn">
+
+🎲 Guess the Number
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "scanner"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

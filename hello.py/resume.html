@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Resume Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="html.html">HTML</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (4).jpeg">
+
+<h1>📄 HTML Resume Page</h1>
+
+<p>
+
+Learn how to create a professional resume using HTML.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a personal resume webpage.
+The page includes your personal information, education,
+skills, work experience, and contact details.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Understanding of headings and paragraphs.</li>
+
+<li>Knowledge of lists.</li>
+
+<li>Basic knowledge of links.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="resumeCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;My Resume&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;Mohamed&lt;/h1&gt;
+
+&lt;h2&gt;About Me&lt;/h2&gt;
+&lt;p&gt;
+I am a beginner web developer learning HTML, CSS, and JavaScript.
+&lt;/p&gt;
+
+&lt;h2&gt;Education&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;High School Student&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Skills&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Contact&lt;/h2&gt;
+&lt;p&gt;
+Email: example@email.com
+&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<button onclick="copyCode('resumeCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Add Your Name</h3>
+
+<p>
+
+Use the <b>&lt;h1&gt;</b> tag to display your name.
+
+</p>
+
+<h3>2. About Me</h3>
+
+<p>
+
+Write a short paragraph introducing yourself.
+
+</p>
+
+<h3>3. Education</h3>
+
+<p>
+
+List your educational background.
+
+</p>
+
+<h3>4. Skills</h3>
+
+<p>
+
+Use an unordered list to display your skills.
+
+</p>
+
+<h3>5. Contact Information</h3>
+
+<p>
+
+Provide an email address or other contact details.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+📄 My Resume
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own resume webpage that includes:
+
+</p>
+
+<ul>
+
+<li>Your full name.</li>
+
+<li>A short "About Me" section.</li>
+
+<li>Your education.</li>
+
+<li>Your skills.</li>
+
+<li>Your contact information.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which HTML tag is commonly used to create an unordered list?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('ul')">
+&lt;ul&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('ol')">
+&lt;ol&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('table')">
+&lt;table&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('div')">
+&lt;div&gt;
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="menu.html">
+
+<button class="project-btn">
+
+🍽️ Restaurant Menu
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "ul"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Calculator Project</title>
+    <link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="python.html">Python</a>
+</nav>
+
+<section class="hero">
+    <img src="images/images.png">
+
+    <h1>🧮 Python Calculator Project</h1>
+
+    <p>
+        Learn how to build a simple calculator using Python.
+    </p>
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+    In this project, you will build a calculator that can perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+</p>
+
+<hr>
+<h2>📋 Requirements</h2>
+
+<ul>
+    <li>Python 3 installed on your computer.</li>
+    <li>Basic knowledge of <b>print()</b> and <b>input()</b>.</li>
+    <li>Understanding of <b>if</b>, <b>elif</b>, and <b>else</b> statements.</li>
+    <li>Basic arithmetic operators (+, -, *, /).</li>
+</ul>
+
+<hr>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+<pre><code id="calculatorCode">
+op = input("Choose (+, -, *, /): ")
+
+num1 = float(input("First number: "))
+num2 = float(input("Second number: "))
+
+if op == "+":
+    print(num1 + num2)
+
+elif op == "-":
+    print(num1 - num2)
+
+elif op == "*":
+    print(num1 * num2)
+
+elif op == "/":
+    if num2 != 0:
+        print(num1 / num2)
+    else:
+        print("Cannot divide by zero")
+
+else:
+    print("Invalid operator")
+</code></pre>
+
+<button onclick="copyCode('calculatorCode')">
+📋 Copy Code
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Get the operator</h3>
+<p>
+The program asks the user to choose an operator:
+<b>+</b>, <b>-</b>, <b>*</b>, or <b>/</b>.
+</p>
+
+<h3>2. Get the numbers</h3>
+<p>
+The program asks the user to enter two numbers using
+<b>float()</b> so decimal numbers are also accepted.
+</p>
+
+<h3>3. Check the operator</h3>
+<p>
+The <b>if</b>, <b>elif</b>, and <b>else</b> statements determine which operation should be performed.
+</p>
+
+<h3>4. Division by zero</h3>
+<p>
+Before division, the program checks whether the second number is equal to zero.
+If it is, Python displays an error message instead of crashing.
+</p>
+
+<h3>5. Invalid operator</h3>
+<p>
+If the user enters an unsupported operator, the program displays
+<b>Invalid operator</b>.
+</p>
+
+<hr>
+<div class="try-box">
+
+<h2>▶️ Try It Yourself</h2>
+
+<p>Choose an operator:</p>
+<div class="operations">
+    <button onclick="setOperation('+')">+</button>
+    <button onclick="setOperation('-')">−</button>
+    <button onclick="setOperation('*')">×</button>
+    <button onclick="setOperation('/')">÷</button>
+</div>
+
+<input type="hidden" id="operation" value="+">
+
+<br><br>
+
+<input
+type="text"
+id="num1"
+placeholder="First Number"
+oninput="this.value=this.value.replace(/[^0-9.-]/g,'')">
+
+<br><br>
+
+<input
+type="text"
+id="num2"
+placeholder="Second Number"
+oninput="this.value=this.value.replace(/[^0-9.-]/g,'')">
+
+<br><br>
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<button class="clear-btn" onclick="clearCalculator()">
+🧹 Clear
+</button>
+
+<div class="result-box">
+    <h3 id="answer">Result: 0</h3>
+</div>
+</div>
+<script>
+function calculate() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let op = document.getElementById("operation").value;
+    let result;
+
+    if(op === "+"){
+        result = num1 + num2;
+    }
+    else if(op === "-"){
+        result = num1 - num2;
+    }
+    else if(op === "*"){
+        result = num1 * num2;
+    }
+    else if(op === "/"){
+        if(num2 === 0){
+            result = "Cannot divide by zero!";
+        }else{
+            result = num1 / num2;
+        }
+    }
+
+    document.getElementById("answer").innerHTML = "Result: " + result;
+}
+
+function clearCalculator(){
+
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+
+    document.getElementById("operation").value = "+";
+
+    document.getElementById("answer").innerHTML = "Result: 0";
+
+    document.getElementById("num1").focus();
+}
+
+document.getElementById("num1").addEventListener("keydown", function(event){
+    if(event.key === "Enter"){
+        calculate();
+    }
+});
+
+document.getElementById("num2").addEventListener("keydown", function(event){
+    if(event.key === "Enter"){
+        calculate();
+    }
+});
+
+function quiz(answer){
+    if(answer === "input"){
+        document.getElementById("quizResult").innerHTML = "✅ Correct!";
+        document.getElementById("quizResult").style.color = "lime";
+    }else{
+        document.getElementById("quizResult").innerHTML = "❌ Wrong Answer!";
+        document.getElementById("quizResult").style.color = "red";
+    }
+}
+</script>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+Can you improve this calculator?
+</p>
+
+<ul>
+    <li>Add the modulus operator (%)</li>
+    <li>Add the exponent operator (**)</li>
+    <li>Display an error if the user leaves any input empty</li>
+    <li>Allow the user to perform another calculation without refreshing the page</li>
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>Which Python function is used to get input from the user?</p>
+
+<button class="quiz-btn" onclick="quiz('input')">input()</button>
+<button class="quiz-btn" onclick="quiz('print')">print()</button>
+<button class="quiz-btn" onclick="quiz('len')">len()</button>
+
+<p id="quizResult"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="guss.html">
+    <button class="project-btn">
+        🎲 Guess the Number
+    </button>
+</a>
+
+
+
+</body>
+</html>

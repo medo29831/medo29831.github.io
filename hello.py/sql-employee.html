@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SQL Employee Database</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="sql.html">SQL</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (12).jpeg">
+
+<h1>👨 Employee Database</h1>
+
+<p>
+
+Learn how to create and manage an employee database using SQL.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+This project creates an employee table, inserts employee records, and retrieves data from the database.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>MySQL or SQLite installed.</li>
+
+<li>Basic SQL knowledge.</li>
+
+<li>Understanding of CREATE TABLE.</li>
+
+<li>Understanding of INSERT and SELECT.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="employeeCode">
+CREATE TABLE Employees (
+
+    ID INT PRIMARY KEY,
+
+    Name VARCHAR(50),
+
+    Job VARCHAR(50),
+
+    Salary DECIMAL(10,2)
+
+);
+
+INSERT INTO Employees
+VALUES
+
+(1,'Ahmed','Manager',8500),
+
+(2,'Sara','Developer',7000),
+
+(3,'Omar','Designer',6200);
+
+SELECT * FROM Employees;
+</code></pre>
+
+<button onclick="copyCode('employeeCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<p><b>CREATE TABLE</b> creates the Employees table.</p>
+
+<p><b>INSERT INTO</b> adds employee records.</p>
+
+<p><b>SELECT *</b> displays all employees.</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+ID | Name | Job | Salary
+
+1 | Ahmed | Manager | 8500
+
+2 | Sara | Developer | 7000
+
+3 | Omar | Designer | 6200
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Try adding a new employee and display only employees whose salary is greater than 7000.
+
+</p>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which SQL command is used to retrieve data from a table?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('select')">
+
+SELECT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('insert')">
+
+INSERT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('update')">
+
+UPDATE
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('delete')">
+
+DELETE
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="sql-store.html">
+
+<button class="project-btn">
+
+🛒 Online Store Database
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "select"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

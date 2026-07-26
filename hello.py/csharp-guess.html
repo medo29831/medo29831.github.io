@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C# Guess the Number Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="csharp.html">C#</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (10).jpeg">
+
+<h1>🎲 Guess the Number</h1>
+
+<p>
+
+Learn how to create a number guessing game using C#.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, the computer generates a random number, and the player keeps guessing until the correct number is found.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>.NET SDK installed.</li>
+
+<li>Visual Studio or Visual Studio Code.</li>
+
+<li>Basic knowledge of variables.</li>
+
+<li>Random class.</li>
+
+<li>while loop.</li>
+
+<li>if / else statements.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="guessCode">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random random = new Random();
+
+        int secret = random.Next(1, 101);
+        int guess = 0;
+
+        Console.WriteLine("Guess a number between 1 and 100");
+
+        while(guess != secret)
+        {
+            Console.Write("Your guess: ");
+            guess = Convert.ToInt32(Console.ReadLine());
+
+            if(guess > secret)
+            {
+                Console.WriteLine("Too High!");
+            }
+            else if(guess < secret)
+            {
+                Console.WriteLine("Too Low!");
+            }
+            else
+            {
+                Console.WriteLine("Correct! You Win!");
+            }
+        }
+    }
+}
+</code></pre>
+
+<button onclick="copyCode('guessCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Random</h3>
+
+<p>
+
+The Random class generates a random number between 1 and 100.
+
+</p>
+
+<h3>2. while Loop</h3>
+
+<p>
+
+The loop continues until the correct number is guessed.
+
+</p>
+
+<h3>3. if / else</h3>
+
+<p>
+
+The program tells the player whether the guess is too high, too low, or correct.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Guess a number between 1 and 100
+
+Your guess: 30
+
+Too Low!
+
+Your guess: 80
+
+Too High!
+
+Your guess: 56
+
+Correct! You Win!
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Improve this project by adding:
+
+</p>
+
+<ul>
+
+<li>Count the number of attempts.</li>
+
+<li>Add difficulty levels.</li>
+
+<li>Allow the player to play again.</li>
+
+<li>Set a maximum number of attempts.</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which C# class is used to generate random numbers?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('random')">
+
+Random
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('console')">
+
+Console
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('math')">
+
+Math
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('string')">
+
+String
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="csharp-atm.html">
+
+<button class="project-btn">
+
+🏧 ATM System
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "random"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

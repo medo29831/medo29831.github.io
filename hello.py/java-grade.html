@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Student Grade Calculator</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="java.html">Java</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (8).jpeg">
+
+<h1>📚 Student Grade Calculator</h1>
+
+<p>
+
+Learn how to calculate a student's average grade and determine whether the student passed or failed using Java.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will create a program that reads three subject grades, calculates the average, and determines whether the student passes or fails.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Java JDK installed.</li>
+
+<li>Basic knowledge of variables.</li>
+
+<li>Scanner class.</li>
+
+<li>Arithmetic operators.</li>
+
+<li>if / else statements.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="gradeCode">
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first grade: ");
+        double grade1 = input.nextDouble();
+
+        System.out.print("Enter second grade: ");
+        double grade2 = input.nextDouble();
+
+        System.out.print("Enter third grade: ");
+        double grade3 = input.nextDouble();
+
+        double average = (grade1 + grade2 + grade3) / 3;
+
+        System.out.println("Average = " + average);
+
+        if(average >= 50){
+
+            System.out.println("Status: Passed");
+
+        }
+
+        else{
+
+            System.out.println("Status: Failed");
+
+        }
+
+        input.close();
+
+    }
+
+}
+</code></pre>
+
+<button onclick="copyCode('gradeCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Scanner</h3>
+
+<p>
+
+The Scanner class reads the student's grades from the keyboard.
+
+</p>
+
+<h3>2. Average Calculation</h3>
+
+<p>
+
+The program calculates the average by adding the three grades and dividing by 3.
+
+</p>
+
+<h3>3. if / else</h3>
+
+<p>
+
+If the average is 50 or higher, the student passes; otherwise, the student fails.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Enter first grade: 80
+
+Enter second grade: 70
+
+Enter third grade: 90
+
+Average = 80.0
+
+Status: Passed
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Can you improve this program?
+
+</p>
+
+<ul>
+
+<li>Read grades for five subjects instead of three.</li>
+
+<li>Display a letter grade (A, B, C, D, F).</li>
+
+<li>Validate that grades are between 0 and 100.</li>
+
+<li>Allow calculating grades for multiple students.</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which Java statement is used to check whether a condition is true or false?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('if')">
+
+if
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('for')">
+
+for
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('switch')">
+
+switch
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('while')">
+
+while
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Back to Java Projects</h2>
+
+<a href="java.html">
+
+<button class="project-btn">
+
+☕ Java Projects
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "if"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

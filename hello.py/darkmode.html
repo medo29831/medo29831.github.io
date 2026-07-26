@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode Toggle Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body id="page">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="javascript.html">JavaScript</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (3).jpeg">
+
+<h1>🌙 Dark Mode Toggle</h1>
+
+<p>
+
+Learn how to switch between Light Mode and Dark Mode using JavaScript.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will create a button that changes the website theme between Light Mode and Dark Mode using JavaScript.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of CSS.</li>
+
+<li>Basic knowledge of JavaScript.</li>
+
+<li>Functions.</li>
+
+<li>DOM Manipulation.</li>
+
+<li>classList.toggle().</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="darkCode">
+function toggleMode(){
+
+document.body.classList.toggle("light-mode");
+
+}
+</code></pre>
+
+<button onclick="copyCode('darkCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Function</h3>
+
+<p>
+
+The function runs when the button is clicked.
+
+</p>
+
+<h3>2. classList.toggle()</h3>
+
+<p>
+
+It adds the class if it doesn't exist, and removes it if it already exists.
+
+</p>
+
+<h3>3. Theme Switching</h3>
+
+<p>
+
+The page changes between Dark Mode and Light Mode.
+
+</p>
+
+<hr>
+
+<h2>▶️ Try It Yourself</h2>
+
+<div class="try-box">
+
+<button onclick="toggleMode()">
+
+🌙 Toggle Theme
+
+</button>
+
+</div>
+
+<hr>
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Can you improve this project?
+
+</p>
+
+<ul>
+
+<li>Add different background colors.</li>
+
+<li>Change the text color automatically.</li>
+
+<li>Save the selected theme using Local Storage.</li>
+
+<li>Add an icon that changes between 🌙 and ☀️.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which JavaScript method is used to add or remove a CSS class?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('toggle')">
+
+classList.toggle()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('style')">
+
+style.display
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('query')">
+
+querySelector()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('create')">
+
+createElement()
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="clock.html">
+
+<button class="project-btn">
+
+⏰ Digital Clock
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<style>
+
+.light-mode{
+
+background:white;
+
+color:black;
+
+}
+
+.light-mode nav{
+
+background:#f2f2f2;
+
+}
+
+.light-mode nav a{
+
+color:black;
+
+}
+
+.light-mode .code-box{
+
+background:#eeeeee;
+
+color:black;
+
+}
+
+.light-mode .output{
+
+background:#eeeeee;
+
+color:black;
+
+border-left:5px solid #2196F3;
+
+}
+
+.light-mode .try-box{
+
+background:#f8f8f8;
+
+border:2px solid #2196F3;
+
+}
+
+</style>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function toggleMode(){
+
+document.body.classList.toggle("light-mode");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "toggle"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

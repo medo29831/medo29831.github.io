@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="javascript.html">JavaScript</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (3).jpeg">
+
+<h1>⏰ Digital Clock</h1>
+
+<p>
+
+Learn how to create a live digital clock using JavaScript.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a digital clock that displays the current time and updates every second using JavaScript.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of CSS.</li>
+
+<li>Basic knowledge of JavaScript.</li>
+
+<li>Functions.</li>
+
+<li>Date Object.</li>
+
+<li>setInterval().</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="clockCode">
+function updateClock(){
+
+let now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleTimeString();
+
+}
+
+setInterval(updateClock,1000);
+</code></pre>
+
+<button onclick="copyCode('clockCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Date()</h3>
+
+<p>
+
+Creates an object containing the current date and time.
+
+</p>
+
+<h3>2. toLocaleTimeString()</h3>
+
+<p>
+
+Returns the current time as a readable string.
+
+</p>
+
+<h3>3. setInterval()</h3>
+
+<p>
+
+Runs the function every 1000 milliseconds (1 second).
+
+</p>
+
+<hr>
+
+<h2>🖥️ Live Clock</h2>
+
+<div class="try-box">
+
+<h3 id="clock">
+
+00:00:00
+
+</h3>
+
+</div>
+
+<hr>
+<h2>🎯 Challenge</h2>
+
+<p>
+Can you improve this digital clock?
+</p>
+
+<ul>
+<li>Display the current date.</li>
+<li>Show AM/PM format.</li>
+<li>Add seconds with animation.</li>
+<li>Change the background color automatically at night.</li>
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+Which JavaScript function is used to run code repeatedly after a fixed time?
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('interval')">
+setInterval()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('timeout')">
+setTimeout()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('date')">
+Date()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('time')">
+getTime()
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Back to JavaScript Projects</h2>
+
+<a href="javascript.html">
+<button class="project-btn">
+📜 JavaScript Projects
+</button>
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+<p>© 2026 Programming Excerpts</p>
+<a href="index.html">Home</a>
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function updateClock(){
+
+let now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleTimeString();
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+function checkAnswer(answer){
+
+if(answer==="interval"){
+
+document.getElementById("result").innerHTML="✅ Correct!";
+
+document.getElementById("result").style.color="lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="❌ Wrong Answer!";
+
+document.getElementById("result").style.color="red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Java - Programming Excerpts</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="cpp.html">C++</a>
+<a href="java.html">Java</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="javascript.html">JavaScript</a>
+<a href="sQl.html">SQL</a>
+<a href="c#.html">C#</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (8).jpeg">
+
+<h1>☕ Java Programming</h1>
+
+<p>
+
+Learn one of the most popular object-oriented programming languages.
+Java is powerful, secure, and used to build desktop, web, and Android applications.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 What is Java?</h2>
+
+<p>
+
+Java is a high-level, object-oriented programming language developed by
+<b>James Gosling</b> at Sun Microsystems in 1995.
+It follows the principle
+<b>"Write Once, Run Anywhere"</b>,
+which means Java programs can run on different operating systems without modification.
+
+</p>
+
+<img src="images/images (9).jpeg">
+<p>
+    Java was created by James Gosling at Sun Microsystems and officially released in 1995. It is one of the world's most popular object-oriented programming languages and follows the principle "Write Once, Run Anywhere."
+</p>
+
+<hr>
+
+<h2>⭐ Features of Java</h2>
+
+<ul>
+
+<li>Object-Oriented Programming (OOP)</li>
+
+<li>Platform Independent</li>
+
+<li>Simple Syntax</li>
+
+<li>Secure</li>
+
+<li>High Performance</li>
+
+<li>Large Community</li>
+
+<li>Used for Android Development</li>
+
+<li>Open Source Tools Available</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 First Java Program</h2>
+
+<div class="code-box">
+
+<pre><code id="javaCode">
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World!");
+
+    }
+
+}
+</code></pre>
+
+<button onclick="copyCode('javaCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<p>
+
+<b>public class Main</b> creates the main class.
+
+</p>
+
+<p>
+
+<b>public static void main()</b> is the starting point of every Java program.
+
+</p>
+
+<p>
+
+<b>System.out.println()</b> prints text on the screen.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Hello, World!
+
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Write a Java program that prints your name.
+
+</p>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which method is the entry point of every Java program?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('main')">
+
+main()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('print')">
+
+print()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('println')">
+
+println()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('start')">
+
+start()
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>☕ Install Java</h2>
+
+<h3>How to install Java on your device?</h3>
+
+<ul>
+
+<li>🪟 Windows</li>
+
+<li>🍎 macOS</li>
+
+<li>🐧 Linux</li>
+
+<li>💻 ChromeOS</li>
+
+</ul>
+
+<hr>
+<h2>🪟 Install Java on Windows</h2>
+
+<p>
+Follow these steps to install Java on Windows:
+</p>
+
+<ol>
+
+<li>Visit the official Oracle Java website.</li>
+
+<li>Download the latest Java Development Kit (JDK).</li>
+
+<li>Run the installer.</li>
+
+<li>Follow the installation instructions.</li>
+
+<li>Open Command Prompt.</li>
+
+<li>Type the following command:</li>
+
+</ol>
+
+<div class="code-box">
+
+<pre><code id="windowsJava">
+java -version
+</code></pre>
+
+<button onclick="copyCode('windowsJava')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<p>
+
+If the Java version appears, the installation was successful. ✅
+
+</p>
+
+<hr>
+
+<h2>🍎 Install Java on macOS</h2>
+
+<ol>
+
+<li>Download the JDK for macOS.</li>
+
+<li>Open the installer.</li>
+
+<li>Complete the installation.</li>
+
+<li>Open Terminal.</li>
+
+<li>Run:</li>
+
+</ol>
+
+<div class="code-box">
+
+<pre><code id="macJava">
+java -version
+</code></pre>
+
+<button onclick="copyCode('macJava')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>🐧 Install Java on Linux</h2>
+
+<p>
+
+Update the package list:
+
+</p>
+
+<div class="code-box">
+
+<pre><code id="linuxJava1">
+sudo apt update
+</code></pre>
+
+<button onclick="copyCode('linuxJava1')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<p>
+
+Install Java:
+
+</p>
+
+<div class="code-box">
+
+<pre><code id="linuxJava2">
+sudo apt install default-jdk
+</code></pre>
+
+<button onclick="copyCode('linuxJava2')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<p>
+
+Check the version:
+
+</p>
+
+<div class="code-box">
+
+<pre><code id="linuxJava3">
+java -version
+</code></pre>
+
+<button onclick="copyCode('linuxJava3')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>💻 Install Java on ChromeOS</h2>
+
+<ol>
+
+<li>Enable Linux Development Environment.</li>
+
+<li>Open Terminal.</li>
+
+<li>Run:</li>
+
+</ol>
+
+<div class="code-box">
+
+<pre><code id="chromeJava">
+sudo apt install default-jdk
+</code></pre>
+
+<button onclick="copyCode('chromeJava')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>🚀 Java Projects for Beginners</h2>
+
+<div class="project-card">
+
+<h3>☕ Java Calculator</h3>
+
+<p>
+
+Create a calculator that performs basic arithmetic operations.
+
+</p>
+
+<a href="java-calculator.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>🎲 Guess the Number</h3>
+
+<p>
+
+Create a game where the player guesses a random number.
+
+</p>
+
+<a href="java-guess.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>🏧 ATM System</h3>
+
+<p>
+
+Build a simple ATM simulation using Java.
+
+</p>
+
+<a href="java-atm.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>📚 Student Grade Calculator</h3>
+
+<p>
+
+Calculate grades and determine pass or fail.
+
+</p>
+
+<a href="java-grade.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer==="main"){
+
+document.getElementById("result").innerHTML="✅ Correct!";
+
+document.getElementById("result").style.color="lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="❌ Wrong Answer!";
+
+document.getElementById("result").style.color="red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C# - Programming Excerpts</title>
+
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="cpp.html">C++</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="javascript.html">JavaScript</a>
+<a href="sQl.html">SQL</a>
+<a href="csharp.html">C#</a>
+<a href="java.html">Java</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (10).jpeg">
+
+<h1>💜 C# Programming</h1>
+
+<p>
+Learn one of the most powerful programming languages developed by Microsoft.
+C# is widely used for desktop applications, web development,
+game development with Unity, and much more.
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 What is C#?</h2>
+
+<p>
+C# (pronounced "C Sharp") is a modern, object-oriented programming language created by Microsoft in 2000.
+It is part of the .NET platform and is used to build Windows applications,
+web applications, games, cloud services, and mobile apps.
+</p>
+
+<img src="images/images (11).jpeg">
+<p>
+    Anders Hejlsberg is the creator of C#. He developed the language at Microsoft in 2000 to create modern, powerful, and easy-to-use software.
+</p>
+
+<hr>
+
+<h2>⭐ Features of C#</h2>
+
+<ul>
+<li>Object-Oriented Programming (OOP)</li>
+<li>Simple and Modern Syntax</li>
+<li>Powerful .NET Framework</li>
+<li>Cross Platform with .NET</li>
+<li>Fast Performance</li>
+<li>Large Community</li>
+<li>Used for Unity Game Development</li>
+<li>Developed by Microsoft</li>
+</ul>
+
+<hr>
+
+<h2>💻 First C# Program</h2>
+
+<div class="code-box">
+
+<pre><code id="csharpCode">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+</code></pre>
+
+<button onclick="copyCode('csharpCode')">
+📋 Copy Code
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<p><b>using System;</b> imports the System namespace.</p>
+
+<p><b>class Program</b> creates the main class.</p>
+
+<p><b>static void Main()</b> is the entry point of the program.</p>
+
+<p><b>Console.WriteLine()</b> prints text on the screen.</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+Hello, World!
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+Write a C# program that prints your name.
+</p>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+Which method is the entry point of every C# program?
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('main')">Main()</button>
+
+<button class="quiz-btn" onclick="checkAnswer('print')">Print()</button>
+
+<button class="quiz-btn" onclick="checkAnswer('write')">Write()</button>
+
+<button class="quiz-btn" onclick="checkAnswer('start')">Start()</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>💻 Install C#</h2>
+
+<h3>How to install C# on your device?</h3>
+
+<ul>
+<li>🪟 Windows</li>
+<li>🍎 macOS</li>
+<li>🐧 Linux</li>
+<li>💻 ChromeOS</li>
+</ul>
+
+<hr>
+<h2>🪟 Install C# on Windows</h2>
+
+<p>Follow these steps to install C# on Windows:</p>
+
+<ol>
+<li>Visit the official .NET website.</li>
+<li>Download the latest .NET SDK.</li>
+<li>Run the installer.</li>
+<li>Follow the installation instructions.</li>
+<li>Open Command Prompt.</li>
+<li>Type the following command:</li>
+</ol>
+
+<div class="code-box">
+<pre><code id="windowsCsharp">
+dotnet --version
+</code></pre>
+<button onclick="copyCode('windowsCsharp')">
+📋 Copy Code
+</button>
+</div>
+
+<p>If the .NET version appears, the installation was successful. ✅</p>
+
+<hr>
+
+<h2>🍎 Install C# on macOS</h2>
+
+<ol>
+<li>Download the latest .NET SDK for macOS.</li>
+<li>Open the installer.</li>
+<li>Complete the installation.</li>
+<li>Open Terminal.</li>
+<li>Run:</li>
+</ol>
+
+<div class="code-box">
+<pre><code id="macCsharp">
+dotnet --version
+</code></pre>
+<button onclick="copyCode('macCsharp')">
+📋 Copy Code
+</button>
+</div>
+
+<hr>
+
+<h2>🐧 Install C# on Linux</h2>
+
+<p>Update the package list:</p>
+
+<div class="code-box">
+<pre><code id="linuxCsharp1">
+sudo apt update
+</code></pre>
+<button onclick="copyCode('linuxCsharp1')">
+📋 Copy Code
+</button>
+</div>
+
+<p>Install the .NET SDK:</p>
+
+<div class="code-box">
+<pre><code id="linuxCsharp2">
+sudo apt install dotnet-sdk-8.0
+</code></pre>
+<button onclick="copyCode('linuxCsharp2')">
+📋 Copy Code
+</button>
+</div>
+
+<p>Verify the installation:</p>
+
+<div class="code-box">
+<pre><code id="linuxCsharp3">
+dotnet --version
+</code></pre>
+<button onclick="copyCode('linuxCsharp3')">
+📋 Copy Code
+</button>
+</div>
+
+<hr>
+
+<h2>💻 Install C# on ChromeOS</h2>
+
+<ol>
+<li>Enable Linux Development Environment.</li>
+<li>Open Terminal.</li>
+<li>Install the .NET SDK.</li>
+<li>Run:</li>
+</ol>
+
+<div class="code-box">
+<pre><code id="chromeCsharp">
+dotnet --version
+</code></pre>
+<button onclick="copyCode('chromeCsharp')">
+📋 Copy Code
+</button>
+</div>
+
+<hr>
+
+<h2>🚀 C# Projects for Beginners</h2>
+
+<div class="project-card">
+<h3>🧮 Calculator</h3>
+<p>Create a calculator that performs basic arithmetic operations.</p>
+
+<a href="csharp-calculator.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+</div>
+
+<div class="project-card">
+<h3>🎲 Guess the Number</h3>
+<p>Create a game where the player guesses a random number.</p>
+
+<a href="csharp-guess.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+</div>
+
+<div class="project-card">
+<h3>🏧 ATM System</h3>
+<p>Build a simple ATM simulation using C#.</p>
+
+<a href="csharp-atm.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+</div>
+
+<div class="project-card">
+<h3>📚 Student Grade Calculator</h3>
+<p>Calculate grades and determine pass or fail.</p>
+
+<a href="csharp-grade.html">
+<button class="project-btn">
+View Project
+</button>
+</a>
+</div>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+<p>© 2026 Programming Excerpts</p>
+<a href="index.html">Home</a>
+</footer>
+
+<script>
+function copyCode(id){
+const code=document.getElementById(id).innerText;
+navigator.clipboard.writeText(code);
+alert("Code copied!");
+}
+
+function checkAnswer(answer){
+
+if(answer==="main"){
+document.getElementById("result").innerHTML="✅ Correct!";
+document.getElementById("result").style.color="lime";
+}
+else{
+document.getElementById("result").innerHTML="❌ Wrong Answer!";
+document.getElementById("result").style.color="red";
+}
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SQL Online Store Database</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="sql.html">SQL</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (12).jpeg">
+
+<h1>🛒 Online Store Database</h1>
+
+<p>
+
+Learn how to create a simple online store database using SQL.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+This project creates a Products table for an online store. It stores product names, prices, and stock quantities.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>MySQL or SQLite installed.</li>
+
+<li>Basic SQL knowledge.</li>
+
+<li>Understanding of CREATE TABLE.</li>
+
+<li>Understanding of INSERT and SELECT.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="storeCode">
+CREATE TABLE Products (
+
+    ID INT PRIMARY KEY,
+
+    ProductName VARCHAR(50),
+
+    Price DECIMAL(10,2),
+
+    Quantity INT
+
+);
+
+INSERT INTO Products
+VALUES
+
+(1,'Laptop',35000,8),
+
+(2,'Keyboard',600,25),
+
+(3,'Mouse',350,40);
+
+SELECT * FROM Products;
+</code></pre>
+
+<button onclick="copyCode('storeCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<p><b>CREATE TABLE</b> creates a Products table.</p>
+
+<p><b>INSERT INTO</b> inserts new products into the table.</p>
+
+<p><b>SELECT *</b> displays all products.</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+ID | ProductName | Price | Quantity
+
+1 | Laptop | 35000 | 8
+
+2 | Keyboard | 600 | 25
+
+3 | Mouse | 350 | 40
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Try adding a new product and display only products with a price greater than 1000.
+
+</p>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which SQL command is used to add new records to a table?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('insert')">
+
+INSERT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('select')">
+
+SELECT
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('update')">
+
+UPDATE
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('delete')">
+
+DELETE
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="sql-bank.html">
+
+<button class="project-btn">
+
+🏦 Bank Database
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "insert"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

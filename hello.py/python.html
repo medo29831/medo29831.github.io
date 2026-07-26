@@ -1,146 +1,412 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Learn coding</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">>
-    <Link rel="stylesheet" href="Css/test.css">
-
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Programming Excerpts</title>
+    <link rel="stylesheet" href="Css/test.css">
 </head>
-<body><h1>Learn python</h1>
-    <nav>
+<body>
+
+<nav>
     <a href="index.html">Home</a>
     <a href="python.html">Python</a>
+    <a href="cpp.html">C++</a>
     <a href="html.html">HTML</a>
     <a href="css.html">CSS</a>
     <a href="javascript.html">JavaScript</a>
+    <a href="sQl.html"> SQL</a>
+    <a href="c#.html">C#</a>
+    <a href="java.html">Java</a>
 </nav>
 
-<p>
-Python is one of the most popular programming languages in the world.
-It is simple, powerful, and easy to learn.
-</p>
+<section class="hero">
+    <hr>
+    
+
+<!-- <h2>📚 Contents</h2> -->
+
+<!-- <div class="contents"> 
+
+    <a href="#what">📖 What is Python?</a>
+
+    <a href="#features">⭐ Features</a>
+
+    <a href="#program">💻 First Program</a>
+
+    <a href="#explanation">📘 Explanation</a>
+
+    <a href="#output">🖥 Output</a>
+
+    <a href="#exercise">🎯 Exercise</a>
+
+    <a href="#quiz">❓ Quiz</a>
+
+ </div> -->
+
+<hr>
+    <img src="images/images.png">
+
+    <h1>🐍 Python Programming</h1>
+
+    <p>
+        Learn one of the most popular programming languages in the world.
+        Python is simple, powerful, and perfect for beginners.
+    </p>
+
+</section>
 
 <hr>
 
-<h2>📌 What is Python?</h2>
-
-<img src="https://www.python.org/static/community_logos/python-logo.png" width="250">
+<h2>📖 What is Python?</h2>
 
 <p>
 Python is a high-level programming language created by Guido van Rossum in 1991.
-It is widely used in web development, artificial intelligence, cybersecurity, data science, and automation.
+It is widely used in web development, artificial intelligence,
+cybersecurity, data science, automation, and software development.
 </p>
-
-<h3>Example</h3>
-
-<pre>
-print("Hello World")
-</pre>
+    <img src="images/images.jpeg">
 
 <hr>
 
-<h2>⭐ Why is Python easy?</h2>
-
-<p>
-Python uses simple English words and has a clean syntax, making it one of the easiest languages for beginners.
-</p>
+<h2>⭐ Features of Python</h2>
 
 <ul>
-<li>Easy to read.</li>
-<li>Easy to write.</li>
-<li>Less code.</li>
-<li>Huge community.</li>
+    <li>Easy to Learn</li>
+    <li>Simple Syntax</li>
+    <li>Open Source</li>
+    <li>Cross Platform</li>
+    <li>Large Community</li>
+    <li>Powerful Libraries</li>
 </ul>
 
-<h3>Example</h3>
+<hr>
+<h2 >💻 First Python Program</h2>
 
-<pre>
-name = "Medo"
+<div class="code-box">
 
-print(name)
-</pre>
+<pre><code id="pythonCode">
+print("Hello, World!")
+</code></pre>
+
+<button onclick="copyCode('pythonCode')">📋 Copy Code</button>
+
+</div>
 
 <hr>
 
-<h2>🎯 Why should beginners learn Python?</h2>
+<h2>📖 Code Explanation</h2>
 
 <p>
-Python helps beginners understand programming concepts without worrying about complex syntax.
+
+<b>print()</b> is a built-in Python function used to display text on the screen.
+
+In this example, Python prints:
+
+<b>Hello, World!</b>
+
 </p>
 
+<hr>
+
+<h2>🖥 Output</h2>
+
+<div class="output">
+
+Hello, World!
+
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Write a Python program that prints your name.
+
+</p>
+
+<hr>
+
+<h2><h2>Quiz ❓</h2>
+<p>
+    What is the function in Python that is used to get input from the user?
+
+</p>
+<button class="quiz-btn" onclick="checkAnswer('input')">input()</button>
+
+<button class="quiz-btn" onclick="checkAnswer('print')">print()</button>
+
+<button class="quiz-btn" onclick="checkAnswer('len')">len()</button>
+
+<button class="quiz-btn" onclick="checkAnswer('int')">int()</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2> 💻 Install Python</h2>
+<h3>
+    How to download Python on your device?
+</h3>
+<h3>There are four of the most common operating systems on which Python can be installed.</h3>
+<ul>
+    <li>
+        🪟 Windows
+        <img src="images/images (1).jpeg" class="os-img">
+    </li>    
+    
+    <li>
+         🍎 macOS
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/MacOS_logo.svg" class="os-img">
+    </li>
+
+    <li>
+        🐧 Linux
+        <img src="images/images (2).jpeg"> 
+    </li>
+
+    <li>
+        💻 ChromeOS
+        <img src="images/images (3).jpeg">
+    </li>
+
+        
+</ul>
+<hr>
+<h2>In this section, you will learn how to install Python on the Windows operating system step by step</h2>
+<h3>💻 Install Python on Windows</h3>
+Steps:
 <ol>
-<li>Easy to learn.</li>
-<li>Free.</li>
-<li>Many tutorials.</li>
-<li>Used by millions.</li>
-<li>Works on Windows, Linux and macOS.</li>
+    <li>1-Visit the official Python website
+
+    <a href="https://www.python.org/" target="_blank">
+     <button class="web_python">To visit the official Python website, click here</button></a>
+    </li>
+    <li>2-Click to Downloads</li>
+    <p>
+        This will take you to another page on the same site where you will see  Python 3.14.6the latest version available at this time
+    </p>        
+    <li>3-Open the downloaded installer</li>
+
+    <li>4-Check Add Python to PATH</li>
+    <li>5-Click Install Now</li>
+    <li>6-Wait until the installation is complete</li>
+    <li>7-Open Command Prompt and type</li>
+
 </ol>
 
+<div class="code-box">
+
+<pre><code id="windowsCode">
+python --version
+</code></pre>
+
+<button onclick="copyCode('windowsCode')">📋 Copy Code</button>
+
+</div>
+<p>If the Python version appears, the installation was successful. ✅</p>
+
+
+<hr>
+<h2>How to Install Python on macOS🍎❓</h2>
+Steps:
+<ol>
+    <li>1-Visit the official Python website</li>
+    <li>2-Click Download Python to download the latest version for macOS</li>
+    <li>3-Open the downloaded installer</li>
+    <li>4-Follow the installation instructions by clicking Continue and then Install</li>
+    <li>5-Enter your Mac password if prompted</li>
+    <li>6-Wait for the installation to finish, then click Close</li>
+</ol>
+        <h3>Verify the Installation</h3>
+    <ol>
+        <li>
+    7-Open the Terminal application
+    </li>
+    <li>8-Type the following command</li>
+    </ol>
+<div class="code-box">
+
+<pre><code id="macCode">
+python --version
+</code></pre>
+
+<button onclick="copyCode('macCode')">📋 Copy Code</button>
+
+</div>
+
+
+<p>1-Press Enter</p>
+<p>2-If the Python version is displayed, Python has been installed successfully ✅</p>
+</ol>
+<hr>
+<h2>How to Install Python on 🐧 Linux?</h2>
+Steps:
+<ol>
+    <li>1-Open the Terminal</li>
+    <li>2-Update the package list by running</li>
+</ol>
+<div class="code-box">
+<pre><code id="linuxCode">
+sudo apt update
+</code></pre>
+<button onclick="copyCode('linuxCode')">📋 Copy Code</button>
+
+</div>
+<P>3-Install Python by running</P>
+
+<div class="code-box">
+<pre><code id="linux2">
+    sudo apt install python3
+</code></pre>
+<button onclick="copyCode('linux2')">📋 Copy Code</button>
+
+</div>
+<p>4-Wait for the installation to complete</p>
+<p>Verify the Installation</p>
+<ol>
+    <li>1-Open the Terminal</li>
+    <li>2-Type the following command</li>
+</ol>
+
+</div>
+<P>3-Install Python by running</P>
+
+<div class="code-box">
+<pre><code id="linux3">
+python3 --version
+</code></pre>
+<button onclick="copyCode('linux3')">📋 Copy Code</button>
+
+</div>
+
+<ol>
+    <li>3-Press Enter</li>
+    <li>4-If the Python version is displayed, Python has been installed successfully ✅</li>
+</ol>
 <hr>
 
-<h2>💻 What can you build with Python?</h2>
+<h2>How to Install Python on ChromeOS?</h2>
+Steps:
+<ol>
+    <li>1-Open Settings</li>
+    <li>2-Go to Developers</li>
+    <li>3-Turn on Linux Development Environment</li>
+    <li>4-Wait for the installation to complete</li>
+    <li>5-Open the Terminal application</li>
+    <li>6-Update the package list by running</li>
+</ol>
+                
 
+<div class="code-box">
+<pre><code id="ChromeOS">
+sudo apt update
+</code></pre>
+<button onclick="copyCode('ChromeOS')">📋 Copy Code</button>
+
+</div>
 <ul>
-<li>Websites</li>
-<li>Games</li>
-<li>Desktop Applications</li>
-<li>Artificial Intelligence</li>
-<li>Machine Learning</li>
-<li>Cybersecurity Tools</li>
-<li>Automation Scripts</li>
-<li>Data Analysis</li>
+    <li>7-Install Python by running</li>
 </ul>
 
+<div class="code-box">
+<pre><code id="ChromeOS2">
+sudo apt install python3
+</code></pre>
+<button onclick="copyCode('ChromeOS2')">📋 Copy Code</button>
+
+</div>
+
+<h2>Verify the Installation</h2>
+<ul>
+    <li>1-In the Terminal, type:</li>
+</ul>
+
+
+<div class="code-box">
+<pre><code id="ChromeOS3">
+python3 --version
+</code></pre>
+<button onclick="copyCode('ChromeOS3')">📋 Copy Code</button>
+
+</div>
+<ul>
+    <li>2-Press Enter</li>
+    <li>3-If the Python version is displayed, Python has been installed successfully ✅</li>
+</ul>
 <hr>
 
-<h2>🔁 Loops</h2>
 
-<p>
-Loops repeat code automatically.
-</p>
 
-<pre>
-for i in range(5):
-    print(i)
-</pre>
 
-<hr>
 
-<h2>❓ If Statement</h2>
 
-<p>
-The if statement allows your program to make decisions.
-</p>
 
-<pre>
-age = 18
 
-if age >= 18:
-    print("Adult")
-</pre>
 
-<hr>
 
-<h2>⚙️ Functions</h2>
-
-<p>
-Functions help organize your code and reuse it.
-</p>
-
-<pre>
-def hello():
-    print("Welcome!")
-
-hello()
-</pre>
 
 <hr>
 
-<h2>🏁 Conclusion</h2>
+<h2>🚀 Python Projects for Beginners</h2>
 
-<p>
-Python is one of the best programming languages for beginners. It is easy, powerful, fast, and used by companies all over the world.
-</p>
+<div class="project-card">
+    <h3>🧮 Calculator</h3>
+    <p>Create a calculator that performs basic arithmetic operations.</p>
+    <a href="calc.html">
+    <button class="project-btn">View Project</button>
+    </a>
+</div>
+
+<div class="project-card">
+    <h3>🎲 Guess the Number</h3>
+    <p>Create a game where the user guesses a random number.</p>
+    <a href="guss.html">
+    <button class="project-btn">View Project</button>
+    </a>
+</div>
+
+<div class="project-card">
+    <h3>📋 To-Do List</h3>
+    <p>Build a simple program to manage daily tasks.</p>
+    <a href="todo.html">
+    <button class="project-btn">View Project</button>
+    </a>
+</div>
+
+<div class="project-card">
+    <h3>🔐 Password Generator</h3>
+    <p>Generate strong and secure passwords.</p>
+    <a href="pass.html">
+    <button class="project-btn">View Project</button>
+    </a>
+
+<hr>
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+function copyCode(id) {
+    const code = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(code);
+    alert("Code copied!");
+}
+function setOperation(op){
+    document.getElementById("operation").value = op;
+}
+</script>
+
+
+
+
 
 </body>
 </html>

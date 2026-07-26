@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Personal Profile Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="html.html">HTML</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (4).jpeg">
+
+<h1>👤 HTML Personal Profile Page</h1>
+
+<p>
+Learn how to create a simple personal profile page using HTML.
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build your own personal profile page.
+The page will include your name, photo, short biography,
+skills, hobbies, and contact information.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML tags.</li>
+
+<li>Understanding of headings and paragraphs.</li>
+
+<li>Knowledge of images and links.</li>
+
+<li>Basic knowledge of lists.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="profileCode">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;title&gt;My Profile&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;Mohamed&lt;/h1&gt;
+
+&lt;img src="profile.jpg" alt="My Photo" width="200"&gt;
+
+&lt;p&gt;
+Hello! I am learning HTML and web development.
+&lt;/p&gt;
+
+&lt;h2&gt;My Skills&lt;/h2&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;a href="https://github.com/"&gt;
+Visit My GitHub
+&lt;/a&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+<button onclick="copyCode('profileCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Add Your Name</h3>
+
+<p>
+
+Use the <b>&lt;h1&gt;</b> tag to display your name.
+
+</p>
+
+<h3>2. Add Your Photo</h3>
+
+<p>
+
+Use the <b>&lt;img&gt;</b> tag to display your personal image.
+
+</p>
+
+<h3>3. Write About Yourself</h3>
+
+<p>
+
+Use the <b>&lt;p&gt;</b> tag to write a short biography.
+
+</p>
+
+<h3>4. Create a Skills List</h3>
+
+<p>
+
+Use the <b>&lt;ul&gt;</b> and <b>&lt;li&gt;</b> tags.
+
+</p>
+
+<h3>5. Add a Link</h3>
+
+<p>
+
+Use the <b>&lt;a&gt;</b> tag to create a clickable link.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+👤 Mohamed
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own personal profile page that includes:
+
+</p>
+
+<ul>
+
+<li>Your name.</li>
+
+<li>Your photo.</li>
+
+<li>A short paragraph about yourself.</li>
+
+<li>A list of your skills.</li>
+
+<li>A link to your GitHub or another website.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which HTML tag is used to display an image?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('img')">
+&lt;img&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('p')">
+&lt;p&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('a')">
+&lt;a&gt;
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('div')">
+&lt;div&gt;
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="resume.html">
+
+<button class="project-btn">
+
+📄 Resume Page
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "img"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

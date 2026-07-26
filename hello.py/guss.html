@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python Guess the Number Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="python.html">Python</a>
+
+</nav>
+
+
+
+<section class="hero">
+
+<img src="images/images.png">
+
+<h1>🎲 Python Guess the Number Project</h1>
+
+<p>
+Learn how to build a guessing game using Python.
+</p>
+
+</section>
+
+
+
+<hr>
+
+
+
+<h2>📖 Project Overview</h2>
+
+<p>
+In this project, you will build a game where the computer chooses a random number,
+and the player tries to guess it.
+The program gives hints if the guess is too high or too low.
+</p>
+
+
+
+<hr>
+
+
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Python 3 installed on your computer.</li>
+
+<li>
+Basic knowledge of <b>print()</b> and <b>input()</b>.
+</li>
+
+<li>
+Understanding of <b>if</b>, <b>elif</b>, and <b>else</b>.
+</li>
+
+<li>
+Basic knowledge of the <b>random</b> module.
+</li>
+
+</ul>
+
+
+
+<hr>
+
+
+
+<h2>💻 Source Code</h2>
+
+
+<div class="code-box">
+
+<pre><code id="guessCode">
+
+import random
+
+secret_number = random.randint(1, 100)
+
+guess = int(input("Guess a number between 1 and 100: "))
+
+
+if guess == secret_number:
+
+    print("🎉 Correct! You guessed the number.")
+
+
+elif guess < secret_number:
+
+    print("⬇️ Too low!")
+
+
+else:
+
+    print("⬆️ Too high!")
+
+</code></pre>
+
+
+<button onclick="copyCode('guessCode')">
+
+📋 Copy Code
+
+</button>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<h2>📖 Code Explanation</h2>
+
+
+
+<h3>1. Import random</h3>
+
+<p>
+The program imports the random module to generate a random number.
+</p>
+
+
+
+<h3>2. Create the secret number</h3>
+
+<p>
+The function <b>random.randint()</b> selects a random number between 1 and 100.
+</p>
+
+
+
+<h3>3. Get player's guess</h3>
+
+<p>
+The player enters a number using <b>input()</b>.
+</p>
+
+
+
+<h3>4. Compare the numbers</h3>
+
+<p>
+The program uses <b>if</b>, <b>elif</b>, and <b>else</b>
+to check if the guess is correct, too high, or too low.
+</p>
+
+
+
+<h3>5. Display the result</h3>
+
+<p>
+The game gives hints to help the player find the correct number.
+</p>
+
+
+
+<hr>
+
+
+
+
+<div class="try-box">
+
+
+<h2>▶️ Try It Yourself</h2>
+
+
+<p>
+Guess a number between 1 and 100:
+</p>
+
+
+<input 
+type="number"
+id="guessInput"
+placeholder="Your Guess">
+
+
+<br><br>
+
+
+<button onclick="guessGame()">
+
+🎲 Guess
+
+</button>
+
+
+
+<button class="clear-btn" onclick="resetGame()">
+
+🧹 New Game
+
+</button>
+
+
+
+<div class="result-box">
+
+<h3 id="answer">
+
+Result: Start guessing!
+
+</h3>
+
+</div>
+
+
+</div>
+
+
+
+
+<hr>
+
+
+
+
+<h2>🎯 Challenge</h2>
+
+
+<p>
+Can you improve this guessing game?
+</p>
+
+
+<ul>
+
+<li>Add a limited number of attempts.</li>
+
+<li>Add difficulty levels.</li>
+
+<li>Add a score system.</li>
+
+<li>Save the best score.</li>
+
+</ul>
+
+
+
+<hr>
+
+
+
+
+<h2>❓ Quiz</h2>
+
+
+<p>
+Which Python module is used to generate random numbers?
+</p>
+
+
+
+<button class="quiz-btn" onclick="quiz('random')">
+
+random
+
+</button>
+
+
+
+<button class="quiz-btn" onclick="quiz('math')">
+
+math
+
+</button>
+
+
+
+<button class="quiz-btn" onclick="quiz('time')">
+
+time
+
+</button>
+
+
+
+<p id="quizResult"></p>
+
+
+
+<hr>
+
+
+
+<h2>➡️ Next Project</h2>
+
+
+<a href="todo.html">
+
+<button class="project-btn">
+
+📋 To-Do List
+
+
+</button>
+
+</a>
+
+
+
+
+
+<script>
+
+
+let secretNumber = Math.floor(Math.random() * 100) + 1;
+
+let attempts = 0;
+
+
+
+function guessGame(){
+
+
+let guess = Number(document.getElementById("guessInput").value);
+
+let result = document.getElementById("answer");
+
+
+
+if(document.getElementById("guessInput").value === ""){
+
+result.innerHTML = "⚠️ Enter a number first!";
+
+return;
+
+}
+
+
+
+attempts++;
+
+
+
+if(guess === secretNumber){
+
+
+result.innerHTML =
+"🎉 Correct! The number was " 
++ secretNumber +
+"<br>Attempts: " + attempts;
+
+
+}
+
+
+
+else if(guess < secretNumber){
+
+
+result.innerHTML =
+"⬇️ Too low! Try again.";
+
+
+}
+
+
+
+else{
+
+
+result.innerHTML =
+"⬆️ Too high! Try again.";
+
+
+}
+
+
+
+}
+
+
+
+
+function resetGame(){
+
+
+secretNumber = Math.floor(Math.random() * 100) + 1;
+
+
+attempts = 0;
+
+
+document.getElementById("guessInput").value = "";
+
+
+document.getElementById("answer").innerHTML =
+"Result: Start guessing!";
+
+
+}
+
+
+
+
+
+function quiz(answer){
+
+
+if(answer === "random"){
+
+
+document.getElementById("quizResult").innerHTML =
+"✅ Correct!";
+
+
+}
+
+else{
+
+
+document.getElementById("quizResult").innerHTML =
+"❌ Wrong Answer!";
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

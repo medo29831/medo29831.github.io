@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Calculator Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="javascript.html">JavaScript</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (3).jpeg">
+
+<h1>🧮 JavaScript Calculator</h1>
+
+<p>
+
+Learn how to build a simple calculator using JavaScript.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will create a calculator that performs basic arithmetic operations using JavaScript and HTML.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of JavaScript.</li>
+
+<li>Variables.</li>
+
+<li>Functions.</li>
+
+<li>if / else statements.</li>
+
+<li>DOM Manipulation.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="jsCalc">
+
+let num1 = 10;
+
+let num2 = 5;
+
+let result = num1 + num2;
+
+console.log(result);
+
+</code></pre>
+
+<button onclick="copyCode('jsCalc')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Variables</h3>
+
+<p>
+
+Two variables are created to store the numbers.
+
+</p>
+
+<h3>2. Calculation</h3>
+
+<p>
+
+JavaScript adds the two numbers together.
+
+</p>
+
+<h3>3. Output</h3>
+
+<p>
+
+The result is displayed using <b>console.log()</b>.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+15
+
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Modify the program so it performs subtraction, multiplication, and division.
+
+</p>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+Which JavaScript keyword is used to declare a variable?
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('let')">
+let
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('print')">
+print
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('echo')">
+echo
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('var()')">
+var()
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<div class="try-box">
+
+<h2>▶️ Try It Yourself</h2>
+
+<p>Choose an operation:</p>
+
+<div class="operations">
+
+<button onclick="setOperation('+')">+</button>
+
+<button onclick="setOperation('-')">−</button>
+
+<button onclick="setOperation('*')">×</button>
+
+<button onclick="setOperation('/')">÷</button>
+
+</div>
+
+<input type="hidden" id="operation" value="+">
+
+<br><br>
+
+<input
+type="number"
+id="num1"
+placeholder="First Number">
+
+<br><br>
+
+<input
+type="number"
+id="num2"
+placeholder="Second Number">
+
+<br><br>
+
+<button onclick="calculate()">
+Calculate
+</button>
+
+<button class="clear-btn" onclick="clearCalculator()">
+🧹 Clear
+</button>
+
+<div class="result-box">
+
+<h3 id="answer">
+Result: 0
+</h3>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="random.html">
+
+<button class="project-btn">
+
+🎲 Random Number Generator
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+function copyCode(id){
+    const code = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(code);
+    alert("Code copied!");
+}
+
+function checkAnswer(answer){
+    if(answer === "let"){
+        document.getElementById("result").innerHTML = "✅ Correct!";
+        document.getElementById("result").style.color = "lime";
+    }else{
+        document.getElementById("result").innerHTML = "❌ Wrong Answer!";
+        document.getElementById("result").style.color = "red";
+    }
+}
+
+function setOperation(op){
+    document.getElementById("operation").value = op;
+}
+
+function calculate(){
+
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let op = document.getElementById("operation").value;
+    let result;
+
+    if(document.getElementById("num1").value === "" ||
+       document.getElementById("num2").value === ""){
+        document.getElementById("answer").innerHTML =
+        "Result: Please enter both numbers!";
+        return;
+    }
+
+    if(op === "+"){
+        result = num1 + num2;
+    }
+    else if(op === "-"){
+        result = num1 - num2;
+    }
+    else if(op === "*"){
+        result = num1 * num2;
+    }
+    else if(op === "/"){
+        if(num2 === 0){
+            result = "Cannot divide by zero!";
+        }else{
+            result = num1 / num2;
+        }
+    }
+
+    document.getElementById("answer").innerHTML =
+    "Result: " + result;
+}
+
+function clearCalculator(){
+    document.getElementById("num1").value = "";
+    document.getElementById("num2").value = "";
+    document.getElementById("operation").value = "+";
+    document.getElementById("answer").innerHTML = "Result: 0";
+    document.getElementById("num1").focus();
+}
+
+// تشغيل الحساب عند الضغط على Enter
+document.getElementById("num1").addEventListener("keydown", function(event){
+    if(event.key === "Enter"){
+        calculate();
+    }
+});
+
+document.getElementById("num2").addEventListener("keydown", function(event){
+    if(event.key === "Enter"){
+        calculate();
+    }
+});
+
+// اختيار العملية من لوحة المفاتيح
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "+"){
+        setOperation("+");
+    }
+
+    else if(event.key === "-"){
+        setOperation("-");
+    }
+
+    else if(event.key === "*"){
+        setOperation("*");
+    }
+
+    else if(event.key === "/"){
+        setOperation("/");
+    }
+
+});
+
+</script>
+
+</body>
+</html>

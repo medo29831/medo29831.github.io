@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Responsive Navigation Bar</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="css.html">CSS</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (1).png">
+
+<h1>🌐 Responsive Navigation Bar</h1>
+
+<p>
+
+Learn how to build a modern responsive navigation bar using CSS Flexbox.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will create a responsive navigation bar.
+You will learn how to arrange links using Flexbox and make the navigation adapt to different screen sizes.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Basic knowledge of HTML.</li>
+
+<li>Basic knowledge of CSS.</li>
+
+<li>Understanding of Flexbox.</li>
+
+<li>Basic knowledge of Media Queries.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="navbarHtml">
+&lt;nav&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Services&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+</code></pre>
+
+<button onclick="copyCode('navbarHtml')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<div class="code-box">
+
+<pre><code id="navbarCss">
+nav{
+background:#222;
+display:flex;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00BFFF;
+}
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+}
+</code></pre>
+
+<button onclick="copyCode('navbarCss')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Flexbox</h3>
+
+<p>
+
+The <b>display: flex</b> property arranges the navigation links in one row.
+
+</p>
+
+<h3>2. Spacing</h3>
+
+<p>
+
+The <b>gap</b> property adds space between the links.
+
+</p>
+
+<h3>3. Hover Effect</h3>
+
+<p>
+
+The <b>:hover</b> selector changes the link color when the mouse moves over it.
+
+</p>
+
+<h3>4. Responsive Design</h3>
+
+<p>
+
+The <b>@media</b> rule changes the navigation layout on smaller screens.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+<nav style="display:flex;justify-content:center;gap:20px;background:#222;padding:15px;">
+
+<a href="#" style="color:white;text-decoration:none;">Home</a>
+
+<a href="#" style="color:white;text-decoration:none;">About</a>
+
+<a href="#" style="color:white;text-decoration:none;">Services</a>
+
+<a href="#" style="color:white;text-decoration:none;">Contact</a>
+
+</nav>
+
+</div>
+
+<hr>
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Create your own responsive navigation bar that includes:
+
+</p>
+
+<ul>
+
+<li>At least four navigation links.</li>
+
+<li>Different background and text colors.</li>
+
+<li>A hover effect for each link.</li>
+
+<li>A responsive layout using Media Queries.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which CSS property is used to arrange items in a Flexbox layout?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('display')">
+
+display
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('margin')">
+
+margin
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('padding')">
+
+padding
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('position')">
+
+position
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="gallery-css.html">
+
+<button class="project-btn">
+
+🖼️ Image Gallery Layout
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "display"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

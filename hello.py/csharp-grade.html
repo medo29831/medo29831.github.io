@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C# Student Grade Calculator</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="csharp.html">C#</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (10).jpeg">
+
+<h1>📚 Student Grade Calculator</h1>
+
+<p>
+
+Learn how to calculate a student's grade using C#.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+This project reads a student's score, calculates the grade, and determines whether the student passed or failed.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>.NET SDK installed.</li>
+
+<li>Visual Studio or Visual Studio Code.</li>
+
+<li>Variables.</li>
+
+<li>if / else if / else statements.</li>
+
+<li>Console input and output.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="gradeCode">
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter your score: ");
+
+        int score = Convert.ToInt32(Console.ReadLine());
+
+        if(score >= 90)
+            Console.WriteLine("Grade: A");
+
+        else if(score >= 80)
+            Console.WriteLine("Grade: B");
+
+        else if(score >= 70)
+            Console.WriteLine("Grade: C");
+
+        else if(score >= 60)
+            Console.WriteLine("Grade: D");
+
+        else
+            Console.WriteLine("Grade: F");
+    }
+}
+</code></pre>
+
+<button onclick="copyCode('gradeCode')">
+📋 Copy Code
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Input</h3>
+
+<p>
+
+The program asks the user to enter the student's score.
+
+</p>
+
+<h3>2. Conditions</h3>
+
+<p>
+
+The program uses if / else if statements to determine the correct grade.
+
+</p>
+
+<h3>3. Output</h3>
+
+<p>
+
+The corresponding letter grade is displayed on the screen.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Enter your score: 85
+
+Grade: B
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Improve this project by adding:
+
+</p>
+
+<ul>
+
+<li>Pass or Fail message.</li>
+
+<li>Input validation.</li>
+
+<li>Percentage calculation.</li>
+
+<li>Grade description (Excellent, Very Good, Good...)</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which statement is used to check multiple conditions in C#?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('if')">
+
+if / else if
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('switch')">
+
+switch
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('while')">
+
+while
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('for')">
+
+for
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>🔙 Back to C# Projects</h2>
+
+<a href="csharp.html">
+
+<button class="project-btn">
+
+💜 Back to C# Page
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "if"){
+
+document.getElementById("result").innerHTML = "✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML = "❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

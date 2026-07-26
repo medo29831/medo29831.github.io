@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C++ Guess the Number Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="cpp.html">C++</a>
+
+</nav>
+
+
+<section class="hero">
+
+<img src="images/_تنزيل.png">
+
+<h1>🎲 C++ Guess the Number Project</h1>
+
+<p>
+
+Learn how to build a fun guessing game using C++.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a game where the computer generates a
+random number between 1 and 100.
+The player must guess the correct number.
+The program will tell the player whether the guess is too high,
+too low, or correct.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>C++ compiler (g++, MinGW, or Visual Studio).</li>
+
+<li>Basic knowledge of <b>cout</b> and <b>cin</b>.</li>
+
+<li>Understanding of <b>if</b>, <b>else if</b>, and <b>else</b>.</li>
+
+<li>Basic knowledge of loops.</li>
+
+<li>Understanding of the <b>cstdlib</b> and <b>ctime</b> libraries.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="guessCode">
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+
+    int secret = rand() % 100 + 1;
+    int guess;
+
+    cout << "Guess a number (1-100): ";
+    cin >> guess;
+
+    if (guess == secret)
+    {
+        cout << "🎉 Correct!";
+    }
+    else if (guess < secret)
+    {
+        cout << "⬇️ Too Low!";
+    }
+    else
+    {
+        cout << "⬆️ Too High!";
+    }
+
+    return 0;
+}
+</code></pre>
+
+<button onclick="copyCode('guessCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Include Libraries</h3>
+
+<p>
+
+The program includes
+<b>iostream</b> for input/output,
+<b>cstdlib</b> for random numbers,
+and <b>ctime</b> to generate a different random number every time.
+
+</p>
+
+<h3>2. Generate a Random Number</h3>
+
+<p>
+
+The function <b>rand()</b> creates a random number,
+and <b>srand(time(0))</b> changes the random seed every time the program runs.
+
+</p>
+
+<h3>3. Get User Input</h3>
+
+<p>
+
+The player enters a number using <b>cin</b>.
+
+</p>
+
+<h3>4. Compare the Guess</h3>
+
+<p>
+
+The program uses <b>if</b>, <b>else if</b>, and <b>else</b>
+to compare the player's guess with the secret number.
+
+</p>
+
+<h3>5. Display the Result</h3>
+
+<p>
+
+The program tells the player whether the guess is correct,
+too high, or too low.
+
+</p>
+
+<hr>
+<h2>🎯 Challenge</h2>
+
+<p>
+Can you improve this game?
+</p>
+
+<ul>
+    <li>Allow the player to guess until they find the correct number.</li>
+    <li>Count the number of attempts.</li>
+    <li>Add difficulty levels (Easy, Medium, Hard).</li>
+    <li>Let the player play again without restarting the program.</li>
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+Which C++ function is used to generate a random number?
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('rand')">
+rand()
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('cout')">
+cout
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('cin')">
+cin
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('main')">
+main()
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="cpp-atm.html">
+    <button class="project-btn">
+        🏧 Simple ATM System
+    </button>
+</a>
+
+<hr>
+
+<footer style="text-align:center; padding:30px;">
+    <p>© 2026 Programming Excerpts</p>
+    <a href="index.html">Home</a>
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "rand"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

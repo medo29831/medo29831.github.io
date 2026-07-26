@@ -1,170 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
-    <title>Learn JavaScript</title>
-    <link rel="stylesheet" href="Css/test.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript - Programming Excerpts</title>
+<link rel="stylesheet" href="Css/test.css">
 </head>
 
 <body>
 
-<h1>JavaScript snippets</h1>
-
 <nav>
-    <a href="index.html">Home</a>
-    <a href="python.html">Python</a>
-    <a href="html.html">HTML</a>
-    <a href="css.html">CSS</a>
-    <a href="javascript.html">JavaScript</a>
+<a href="index.html">Home</a>
+<a href="python.html">Python</a>
+<a href="cpp.html">C++</a>
+<a href="html.html">HTML</a>
+<a href="css.html">CSS</a>
+<a href="javascript.html">JavaScript</a>
+<a href="sQl.html">SQL</a>
+<a href="c#.html">C#</a>
+<a href="java.html">Java</a>
 </nav>
 
+<section class="hero">
+
+<img src="images/images (3).jpeg">
+
+<h1>🟨 JavaScript Programming</h1>
+
 <p>
-JavaScript is one of the most popular programming languages in the world.
-It makes websites interactive by adding dynamic content, animations, and user interaction.
+
+Learn one of the most popular programming languages for web development.
+JavaScript makes web pages interactive and dynamic.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 What is JavaScript?</h2>
+
+<p>
+
+JavaScript is a programming language used to create interactive web pages.
+It allows developers to build dynamic websites by responding to user actions,
+updating content, creating animations, validating forms, and much more.
+
+</p>
+
+<img src="images/_تنزيل.jpeg">
+<p>
+    JavaScript is a programming language created by Brendan Eich in 1995 while working at Netscape. It is one of the core technologies of the web and is used to create interactive websites and web applications.
 </p>
 
 <hr>
 
-<h2>⚡ What is JavaScript?</h2>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="180">
-
-<p>
-JavaScript is a high-level programming language created by Brendan Eich in 1995.
-It is mainly used to add interactivity to websites, but it can also be used for servers, mobile apps, and desktop applications.
-</p>
-
-<h3>Example</h3>
-
-<pre>
-console.log("Hello World");
-</pre>
-
-<hr>
-
-<h2>⭐ Why is JavaScript Important?</h2>
-
-<p>
-JavaScript allows websites to respond to user actions, update content without reloading the page, and create modern web applications.
-</p>
+<h2>⭐ Features of JavaScript</h2>
 
 <ul>
-    <li>Adds interactivity.</li>
-    <li>Creates animations.</li>
-    <li>Handles user input.</li>
-    <li>Works with HTML and CSS.</li>
-</ul>
 
-<h3>Example</h3>
+<li>Easy to Learn</li>
 
-<pre>
-alert("Welcome to JavaScript!");
-</pre>
+<li>Runs in All Modern Browsers</li>
 
-<hr>
+<li>Makes Websites Interactive</li>
 
-<h2>🎯 Why Should Beginners Learn JavaScript?</h2>
+<li>Supports Events and Animations</li>
 
-<p>
-After learning HTML and CSS, JavaScript is the next step to becoming a web developer.
-It allows you to build interactive and professional websites.
-</p>
+<li>Works with HTML and CSS</li>
 
-<ol>
-    <li>Easy to start.</li>
-    <li>Runs in every web browser.</li>
-    <li>Essential for web development.</li>
-    <li>Large community.</li>
-    <li>Many job opportunities.</li>
-</ol>
+<li>Large Developer Community</li>
 
-<hr>
-
-<h2>💻 What Can You Build with JavaScript?</h2>
-
-<ul>
-    <li>Interactive Websites</li>
-    <li>Web Applications</li>
-    <li>Games</li>
-    <li>Mobile Apps</li>
-    <li>Desktop Applications</li>
-    <li>Server Applications (Node.js)</li>
-    <li>Browser Extensions</li>
 </ul>
 
 <hr>
 
-<h2>📄 Variables</h2>
+<h2>💻 First JavaScript Program</h2>
 
-<p>
-Variables are used to store data.
-</p>
+<div class="code-box">
 
-<pre>
-let name = "Medo";
+<pre><code id="jsCode">
+console.log("Hello, World!");
+</code></pre>
 
-console.log(name);
-</pre>
+<button onclick="copyCode('jsCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
 
 <hr>
 
-<h2>❓ If Statement</h2>
+<h2>📖 Code Explanation</h2>
 
 <p>
-The if statement allows JavaScript to make decisions.
+
+<b>console.log()</b> is used to print messages in the browser's developer console.
+
 </p>
 
-<pre>
-let age = 18;
+<p>
 
-if(age >= 18){
-    console.log("Adult");
+It is commonly used for testing and debugging JavaScript code.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+Hello, World!
+
+</div>
+
+<hr>
+
+<h2>🎯 Exercise</h2>
+
+<p>
+
+Write a JavaScript program that prints your name using
+<b>console.log()</b>.
+
+</p>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which JavaScript function is commonly used to print a message in the browser console?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('console.log')">
+
+console.log()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('print')">
+
+print()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('echo')">
+
+echo()
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('printf')">
+
+printf()
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>🚀 JavaScript Projects for Beginners</h2>
+
+<div class="project-card">
+
+<h3>🧮 Simple Calculator</h3>
+
+<p>
+
+Create a calculator using JavaScript.
+
+</p>
+
+<a href="js-calculator.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>🎲 Random Number Generator</h3>
+
+<p>
+
+Generate random numbers using JavaScript.
+
+</p>
+
+<a href="random.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>🌙 Dark Mode Toggle</h3>
+
+<p>
+
+Switch between light mode and dark mode.
+
+</p>
+
+<a href="darkmode.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<h3>⏰ Digital Clock</h3>
+
+<p>
+
+Display the current time using JavaScript.
+
+</p>
+
+<a href="clock.html">
+
+<button class="project-btn">
+
+View Project
+
+</button>
+
+</a>
+
+</div>
+
+<hr>
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
 }
-</pre>
 
-<hr>
+function checkAnswer(answer){
 
-<h2>🔁 Loops</h2>
+    if(answer === "console.log"){
 
-<p>
-Loops repeat code automatically.
-</p>
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
 
-<pre>
-for(let i = 1; i <= 5; i++){
+        document.getElementById("result").style.color = "lime";
 
-    console.log(i);
+    }
 
-}
-</pre>
+    else{
 
-<hr>
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
 
-<h2>⚙️ Functions</h2>
+        document.getElementById("result").style.color = "red";
 
-<p>
-Functions help organize code and avoid repetition.
-</p>
-
-<pre>
-function hello(){
-
-    console.log("Welcome!");
+    }
 
 }
 
-hello();
-</pre>
-
-<hr>
-
-<h2>🏁 Conclusion</h2>
-
-<p>
-JavaScript is one of the most powerful programming languages for web development.
-Combined with HTML and CSS, it allows developers to create modern, responsive, and interactive websites used by millions of people every day.
-</p>
+</script>
 
 </body>
 </html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python To-Do List Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="python.html">Python</a>
+
+</nav>
+
+
+
+<section class="hero">
+
+<img src="images/images.png">
+
+<h1>📋 Python To-Do List Project</h1>
+
+<p>
+Learn how to build a simple To-Do List using Python.
+</p>
+
+</section>
+
+
+
+<hr>
+
+
+
+<h2>📖 Project Overview</h2>
+
+
+<p>
+
+In this project, you will build a To-Do List program that allows users
+to add, view, and manage their daily tasks using Python.
+
+</p>
+
+
+
+<hr>
+
+
+
+<h2>📋 Requirements</h2>
+
+
+<ul>
+
+<li>
+Python 3 installed on your computer.
+</li>
+
+
+<li>
+Basic knowledge of <b>print()</b> and <b>input()</b>.
+</li>
+
+
+<li>
+Understanding of <b>if</b>, <b>elif</b>, and <b>else</b> statements.
+</li>
+
+
+<li>
+Basic knowledge of <b>lists</b> and <b>loops</b>.
+</li>
+
+</ul>
+
+
+
+<hr>
+
+
+
+<h2>💻 Source Code</h2>
+
+
+
+<div class="code-box">
+
+
+<pre><code id="todoCode">
+
+tasks = []
+
+
+while True:
+
+    print("1. Add Task")
+    print("2. Show Tasks")
+    print("3. Exit")
+
+
+    choice = input("Choose: ")
+
+
+    if choice == "1":
+
+        task = input("Enter your task: ")
+
+        tasks.append(task)
+
+        print("Task added successfully!")
+
+
+    elif choice == "2":
+
+        print("Your Tasks:")
+
+        for task in tasks:
+
+            print(task)
+
+
+    elif choice == "3":
+
+        print("Goodbye!")
+
+        break
+
+
+    else:
+
+        print("Invalid choice")
+
+</code></pre>
+
+
+<button onclick="copyCode('todoCode')">
+
+📋 Copy Code
+
+</button>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<h2>📖 Code Explanation</h2>
+
+
+
+<h3>1. Create a task list</h3>
+
+<p>
+
+The program creates an empty list called <b>tasks</b> to store all tasks.
+
+</p>
+
+
+
+<h3>2. Add tasks</h3>
+
+<p>
+
+The user enters a task and the program saves it using <b>append()</b>.
+
+</p>
+
+
+
+<h3>3. Show tasks</h3>
+
+<p>
+
+The program uses a <b>for loop</b> to display all saved tasks.
+
+</p>
+
+
+
+<h3>4. Menu system</h3>
+
+<p>
+
+The user chooses what action they want to perform:
+add tasks, view tasks, or exit.
+
+</p>
+
+
+
+<h3>5. Exit the program</h3>
+
+<p>
+
+The <b>break</b> statement stops the loop and closes the program.
+
+</p>
+
+
+
+<hr>
+
+
+
+<div class="try-box">
+
+
+<h2>▶️ Try It Yourself</h2>
+
+
+<p>
+Add your tasks:
+</p>
+
+
+<input 
+type="text"
+id="taskInput"
+placeholder="Enter your task">
+
+
+<br><br>
+
+
+<button onclick="addTask()">
+
+➕ Add Task
+
+</button>
+
+
+<button class="clear-btn" onclick="clearTasks()">
+
+🧹 Clear
+
+</button>
+
+
+
+<div class="result-box">
+
+<h3>📋 Your Tasks:</h3>
+
+<ul id="taskList">
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<h2>🎯 Challenge</h2>
+
+
+<p>
+Can you improve this To-Do List?
+</p>
+
+
+<ul>
+
+<li>Add a delete button for each task.</li>
+
+<li>Add task priorities.</li>
+
+<li>Save tasks after closing the program.</li>
+
+<li>Add a search feature.</li>
+
+</ul>
+
+
+
+<hr>
+
+
+
+<h2>❓ Quiz</h2>
+
+
+<p>
+Which Python method adds an item to a list?
+</p>
+
+
+<button class="quiz-btn" onclick="quiz('append')">
+
+append()
+
+</button>
+
+
+<button class="quiz-btn" onclick="quiz('remove')">
+
+remove()
+
+</button>
+
+
+<button class="quiz-btn" onclick="quiz('input')">
+
+input()
+
+</button>
+
+
+<p id="quizResult"></p>
+
+
+
+<hr>
+
+
+
+<h2>➡️ Next Project</h2>
+
+
+<a href="rock-paper-scissors.html">
+
+<button class="project-btn">
+
+🔐 Password Generator
+
+
+</button>
+
+</a>
+
+
+
+
+<script>
+
+
+function addTask(){
+
+let input = document.getElementById("taskInput");
+
+let task = input.value;
+
+
+if(task === ""){
+
+document.getElementById("quizResult").innerHTML =
+"⚠️ Enter a task first!";
+
+return;
+
+}
+
+
+let li = document.createElement("li");
+
+li.innerHTML = task;
+
+
+document.getElementById("taskList").appendChild(li);
+
+
+input.value = "";
+
+}
+
+
+
+function clearTasks(){
+
+document.getElementById("taskList").innerHTML = "";
+
+}
+
+
+
+function quiz(answer){
+
+if(answer === "append"){
+
+document.getElementById("quizResult").innerHTML =
+"✅ Correct!";
+
+}
+
+else{
+
+document.getElementById("quizResult").innerHTML =
+"❌ Wrong Answer!";
+
+}
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

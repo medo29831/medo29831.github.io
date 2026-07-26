@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>C++ Simple ATM System Project</title>
+
+<link rel="stylesheet" href="Css/test.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="cpp.html">C++</a>
+
+</nav>
+
+
+<section class="hero">
+
+<img src="images/_تنزيل.png">
+
+<h1>🏧 C++ Simple ATM System</h1>
+
+<p>
+
+Learn how to build a simple ATM system using C++.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a simple ATM system.
+The user can check their balance, deposit money,
+withdraw money, and exit the program.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>C++ compiler (g++, MinGW, or Visual Studio).</li>
+
+<li>Basic knowledge of <b>cout</b> and <b>cin</b>.</li>
+
+<li>Understanding of <b>if</b>, <b>else</b>, and <b>switch</b>.</li>
+
+<li>Basic knowledge of loops.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="atmCode">
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double balance = 1000;
+    int choice;
+    double amount;
+
+    cout << "===== ATM MENU =====" << endl;
+    cout << "1. Check Balance" << endl;
+    cout << "2. Deposit Money" << endl;
+    cout << "3. Withdraw Money" << endl;
+    cout << "4. Exit" << endl;
+
+    cout << "Choose: ";
+    cin >> choice;
+
+    switch(choice)
+    {
+        case 1:
+            cout << "Balance: $" << balance;
+            break;
+
+        case 2:
+            cout << "Enter amount: ";
+            cin >> amount;
+            balance += amount;
+            cout << "New Balance: $" << balance;
+            break;
+
+        case 3:
+            cout << "Enter amount: ";
+            cin >> amount;
+
+            if(amount <= balance)
+            {
+                balance -= amount;
+                cout << "New Balance: $" << balance;
+            }
+            else
+            {
+                cout << "Insufficient Balance!";
+            }
+
+            break;
+
+        case 4:
+            cout << "Goodbye!";
+            break;
+
+        default:
+            cout << "Invalid Choice!";
+    }
+
+    return 0;
+}
+</code></pre>
+
+<button onclick="copyCode('atmCode')">
+📋 Copy Code
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Create Balance</h3>
+
+<p>
+The program starts with a balance of <b>$1000</b>.
+</p>
+
+<h3>2. Display Menu</h3>
+
+<p>
+The ATM displays four options for the user.
+</p>
+
+<h3>3. Read User Choice</h3>
+
+<p>
+The program uses <b>cin</b> to read the user's choice.
+</p>
+
+<h3>4. Execute the Selected Option</h3>
+
+<p>
+The <b>switch</b> statement performs the selected ATM operation.
+</p>
+
+<h3>5. Update Balance</h3>
+
+<p>
+The balance changes after depositing or withdrawing money.
+</p>
+
+<hr>
+<h2>🎯 Challenge</h2>
+
+<p>
+Can you improve this ATM system?
+</p>
+
+<ul>
+
+<li>Allow the user to perform multiple transactions.</li>
+
+<li>Add a PIN code before accessing the ATM.</li>
+
+<li>Display the transaction history.</li>
+
+<li>Prevent depositing or withdrawing negative amounts.</li>
+
+</ul>
+
+<hr>
+
+<h2>❓ Quiz</h2>
+
+<p>
+Which C++ statement is used to display multiple menu options?
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('switch')">
+switch
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('if')">
+if
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('while')">
+while
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('for')">
+for
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="cpp-grade.html">
+
+<button class="project-btn">
+
+📚 Student Grade Calculator
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center; padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+    const code = document.getElementById(id).innerText;
+
+    navigator.clipboard.writeText(code);
+
+    alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+    if(answer === "switch"){
+
+        document.getElementById("result").innerHTML =
+        "✅ Correct!";
+
+        document.getElementById("result").style.color = "lime";
+
+    }
+
+    else{
+
+        document.getElementById("result").innerHTML =
+        "❌ Wrong Answer!";
+
+        document.getElementById("result").style.color = "red";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

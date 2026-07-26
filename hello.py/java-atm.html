@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java ATM System Project</title>
+<link rel="stylesheet" href="Css/test.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="java.html">Java</a>
+</nav>
+
+<section class="hero">
+
+<img src="images/images (8).jpeg">
+
+<h1>🏧 ATM System</h1>
+
+<p>
+
+Learn how to build a simple ATM system using Java.
+
+</p>
+
+</section>
+
+<hr>
+
+<h2>📖 Project Overview</h2>
+
+<p>
+
+In this project, you will build a simple ATM system that allows the user to check the balance, deposit money, withdraw money, and exit the program.
+
+</p>
+
+<hr>
+
+<h2>📋 Requirements</h2>
+
+<ul>
+
+<li>Java JDK installed.</li>
+
+<li>Basic knowledge of variables.</li>
+
+<li>Scanner class.</li>
+
+<li>if / else statements.</li>
+
+<li>while loop.</li>
+
+<li>switch statement.</li>
+
+</ul>
+
+<hr>
+
+<h2>💻 Source Code</h2>
+
+<div class="code-box">
+
+<pre><code id="atmCode">
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        double balance = 1000;
+        int choice;
+
+        while(true){
+
+            System.out.println("\n===== ATM MENU =====");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+
+            System.out.print("Choose: ");
+            choice = input.nextInt();
+
+            switch(choice){
+
+                case 1:
+                    System.out.println("Balance: $" + balance);
+                    break;
+
+                case 2:
+                    System.out.print("Deposit amount: ");
+                    balance += input.nextDouble();
+                    System.out.println("Deposit successful.");
+                    break;
+
+                case 3:
+
+                    System.out.print("Withdraw amount: ");
+                    double amount = input.nextDouble();
+
+                    if(amount <= balance){
+                        balance -= amount;
+                        System.out.println("Withdrawal successful.");
+                    }else{
+                        System.out.println("Insufficient balance.");
+                    }
+
+                    break;
+
+                case 4:
+                    System.out.println("Thank you for using the ATM.");
+                    input.close();
+                    return;
+
+                default:
+                    System.out.println("Invalid choice.");
+
+            }
+
+        }
+
+    }
+
+}
+</code></pre>
+
+<button onclick="copyCode('atmCode')">
+
+📋 Copy Code
+
+</button>
+
+</div>
+
+<hr>
+
+<h2>📖 Code Explanation</h2>
+
+<h3>1. Scanner</h3>
+
+<p>
+
+The Scanner class is used to read user input.
+
+</p>
+
+<h3>2. while(true)</h3>
+
+<p>
+
+The ATM menu keeps running until the user chooses Exit.
+
+</p>
+
+<h3>3. switch</h3>
+
+<p>
+
+The switch statement executes the selected ATM operation.
+
+</p>
+
+<h3>4. Balance</h3>
+
+<p>
+
+The program updates the account balance after each deposit or withdrawal.
+
+</p>
+
+<hr>
+
+<h2>🖥️ Output</h2>
+
+<div class="output">
+
+===== ATM MENU =====
+
+1. Check Balance
+
+2. Deposit
+
+3. Withdraw
+
+4. Exit
+
+Choose: 1
+
+Balance: $1000.0
+
+</div>
+
+<hr>
+
+<h2>🎯 Challenge</h2>
+
+<p>
+
+Can you improve this ATM system?
+
+</p>
+
+<ul>
+
+<li>Add a PIN code before accessing the ATM.</li>
+
+<li>Display the transaction history.</li>
+
+<li>Prevent negative deposits.</li>
+
+<li>Allow transferring money to another account.</li>
+
+</ul>
+
+<hr>
+<h2>❓ Quiz</h2>
+
+<p>
+
+Which Java statement is commonly used to display a menu with multiple options?
+
+</p>
+
+<button class="quiz-btn" onclick="checkAnswer('switch')">
+
+switch
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('for')">
+
+for
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('class')">
+
+class
+
+</button>
+
+<button class="quiz-btn" onclick="checkAnswer('try')">
+
+try
+
+</button>
+
+<p id="result"></p>
+
+<hr>
+
+<h2>➡️ Next Project</h2>
+
+<a href="java-grade.html">
+
+<button class="project-btn">
+
+📚 Student Grade Calculator
+
+</button>
+
+</a>
+
+<hr>
+
+<footer style="text-align:center;padding:30px;">
+
+<p>© 2026 Programming Excerpts</p>
+
+<a href="index.html">Home</a>
+
+</footer>
+
+<script>
+
+function copyCode(id){
+
+const code = document.getElementById(id).innerText;
+
+navigator.clipboard.writeText(code);
+
+alert("Code copied!");
+
+}
+
+function checkAnswer(answer){
+
+if(answer === "switch"){
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+document.getElementById("result").style.color = "lime";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+document.getElementById("result").style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
