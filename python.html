@@ -155,22 +155,22 @@ Write a Python program that prints your name.
 <ul>
     <li>
         🪟 Windows
-        <img src="images/images (1).jpeg" class="os-img">
+        <img src="images/images (1).1.webp" class="os-img">
     </li>    
     
     <li>
          🍎 macOS
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/MacOS_logo.svg" class="os-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/MacOS_logo.svg"  alt="macOS" class="os-img">
     </li>
 
     <li>
         🐧 Linux
-        <img src="images/images (2).jpeg"> 
+        <img src="images/images (2).webp"> 
     </li>
 
     <li>
         💻 ChromeOS
-        <img src="images/images (3).jpeg">
+        <img src="images/images (3).jpeg" alt="ChromeOS">
     </li>
 
         
@@ -399,8 +399,29 @@ function copyCode(id) {
     navigator.clipboard.writeText(code);
     alert("Code copied!");
 }
-function setOperation(op){
-    document.getElementById("operation").value = op;
+
+
+function checkAnswer(answer){
+
+
+if(answer === "input"){
+
+
+document.getElementById("result").innerHTML =
+"✅ Correct!";
+
+
+}
+
+
+else{
+
+
+document.getElementById("result").innerHTML =
+"❌ Wrong Answer!";
+
+
+}
 }
 </script>
 
